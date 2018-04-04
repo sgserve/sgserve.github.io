@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>三国杀自定义武将动态皮肤教程</title>
+		<meta name="description" content="三国杀自定义武将动态皮肤教程" />
+		<meta name="keywords" content="三国杀, 武将, 动态, 皮肤, 社区, 自定义, 教程" />
+		<meta name="author" content="CUPDIR" />
+		<link rel="icon" type="image/x-icon" class="js-site-favicon" href="public/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
+		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script src="js/modernizr.custom.79639.js"></script>
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<script src="js/analytics.js"></script>
+	</head>
+	<body>
+		<div id="container" class="container">
+			<div class="menu-panel">
+				<h3>讲解章节引导</h3>
+				<ul id="menu-toc" class="menu-toc">
+					<li class="menu-toc-current"><a href="#item1">讲在前面</a></li>
+					<li><a href="#item2">基础知识</a></li>
+					<li><a href="#item3">进阶知识</a></li>
+					<li><a href="#item4">制作皮肤</a></li>
+					<li><a href="#item5">服务化</a></li>
+					<li><a href="#item6">拼图应用</a></li>
+					<li><a href="#item7">结束</a></li>
+				</ul>
+
+			</div>
+
+			<div class="bb-custom-wrapper">
+				<div id="bb-bookblock" class="bb-bookblock">
+					<div class="bb-item" id="item1">
+						<div class="content">
+							<div class="scroller">
+								<h2>讲在前面</h2>
+								<p>大家好，在讲解之前可能我需要和大家介绍一下我本人，
+								这样方便我们以后在社区中进一步的交流，我本人是IT男一枚，从事行业也有10几个年头了，
+								这里就有同学要问了，工作都10几个年头了，你跑这里和一群孩子玩儿，这里我要说的是，
+								人人都有向往童年的权利。而且，三国杀这款游戏是我很早就接触的，90，00后也算是传承了
+								我们的意志，这里只是我目前还在徘徊中，尚未找到传承者，只能继续玩下去了。到现在也就是玩个情怀，
+								至于情怀这个东西，大家慢慢体会。 那么接下来我再说一下，为什么要写这个教
+								程，前段儿时间，我浏览社区的时候，发现一个大佬，那个积分很高，肯定是社区老人了，目测
+								也是一个爱好技术，自己折腾了不少东西，在这里我给你点赞，其实不管玩什么，在玩的过程中
+								能体会到其他的乐趣也是不错的，然后我看了，感觉在这里也能找到同类，倍感欣慰。因为我发现
+								这个大佬的方法，是本地替换，因为社区大多都是学生，电脑方面的知识确实有限，很多人其实看
+								了基本成功的也少，而且三国杀游戏更新的也快，这种方法还是很累的，下次估计就不能用了，所
+								以我后来就有一个想法，利用周末或者闲暇时间来搞一个服务，让大家可以轻松的设置一下就可以体验
+								到皮肤替换的效果，后来因为工作原因，反正就是一直想，没有去落实，群内的好多人也一直让我搞
+								一下，因为这个皮肤替换啊，我们群内很早就在玩了，只是一直都是我在玩，他们电脑知识的门槛起步太高，
+								所以我也就没去弄， 后来社区有个任务，做了可以换秀，我就去做了一个这样的任务，发了一个帖子，这
+								是我第一次发帖，然后居然还有人警告我说灌水，给我的帖子删了，然后我就想，怎么发才不会警告，帖子
+								还能尽量少写点字。毕竟我一把年纪了，大叔级别的，打字大多了也累。后来我就做了两个我自定义动态皮肤
+								的GIF发了上去，我最后还留了我们的群号，这里我再贴一下，[338087542]。 后来就有人来找我了，我当时就
+								想既然你发了帖子，人家找你要教程，那么就写一个，我告诉这个人，让他等等，因为是快睡觉的时间了，这也是
+								我凌晨4点爬起来写这个东西的原因，所以大家多多谅解，写的不好可以慢慢修正。好了，大概的前因后果就是这样
+								接下来我们就开始介绍如何快速的设置我们的动态皮肤，我可能会用很长的篇幅给大家讲解技术的原理，因为社区
+								学生比较多嘛，日后大家要是感兴趣可以从事这个行业。
+
+								</p>
+
+								<p>起初的时候，我用平时工作常用的NGINX,这是一个web代理服务，修改了本地host，把三国杀的静态资源部分地址做了rewrite,相当于
+									把部分的地址劫持了，大家可以用劫持这个词去理解，后来群里的朋友也想要这样的效果，当时觉得总不能让他也去搭建这么一个复杂的环境，
+									这才有了后来我把资源搬到了线上，但是问题来了，线上的话，他们也需要修改host才能达到需求，但手机怎么访问，手机系统很多都是有权限的
+									除非root才能得到想要的效果，也不安全，再后来就专门做了个dns服务，只需要设置一下网络的DNS服务就可以了，这个任何手机都是可以设置的。
+									到时候可以自己找一下。 接下来这才有了我想把他做成一个服务的念想，我当时想自己也喜欢这款游戏，也是因为官方再不通知我的额情况下，
+									擅自修改我花钱买的大屁股，大胸，瞎鸡脖修改，后来才有了这一系列的念想。大概的前因后果我介绍完了，下面我们就进入主题，看看如何在零基础的情况下
+									就可以设置一款自己漂亮的武将皮肤。
+									</p>
+
+								<p>下面我放几张关于本次教程最终达到的效果图，方便大家提前达到预览效果。</p>
+								<p>
+									<ul class="grid cs-style-2">
+										<li>
+										<figure>
+											<figcaption>
+												<h3>武将皮肤界面</h3>
+												<span>这个资源是需要亲自裁图的 尺寸为: 93x175 </span>
+											</figcaption>
+											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew01.png" width="800" height="600" alt="img12">
+
+										</figure>
+									</li>
+									<li>
+									<figure>
+										<figcaption>
+											<h3>武将皮肤预览</h3>
+											<span>这个妹子是我们当时群里的美女，大家不要问了。 </span>
+										</figcaption>
+										<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew02.png" width="800" height="600" alt="img12">
+
+									</figure>
+								</li>
+
+
+								<li>
+								<figure>
+									<figcaption>
+										<h3>牌局内的预览</h3>
+										<span>如果你是个三国杀主播的话，这个你也许会很喜欢 </span>
+									</figcaption>
+									<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew03.gif" width="800" height="600" alt="img12">
+
+								</figure>
+							</li>
+									</ul>
+								</p>
+
+								<p>"关于以上所有的的素材图片，都归三国杀官方所有，所有的技术细节都供学习交流使用。如果官方对此有任何的异议，可以联系我，我做下线处理。</p>
+
+								<p>"最后来一张本教程的拼图应用截图，后面会介绍，同学们可以在无聊的时候去玩."</p>
+								<p>
+									<ul class="grid cs-style-2">
+									<li>
+									<figure>
+										<figcaption>
+											<h3>拼图小游戏</h3>
+											<span> 主要是花好月圆那几个武将,现在没胸了，懒得拼了. </span>
+										</figcaption>
+										<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/puzzle.gif" width="800" height="600" alt="img12">
+
+									</figure>
+								</li>
+										</ul>
+
+								</p>
+								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item2">
+						<div class="content">
+							<div class="scroller">
+								<h2>基础知识</h2>
+								<p>在开始介绍原理之前，我们首先要了解一下网页访问过程中的工作原理，那么先说下浏览器，浏览器就是我们平时用来浏览网页的时候打开的
+									窗口，关于内核，我们首先了解一下内核是什么？ 很简答， 我们通俗一点理解，它就好比我们让几个翻译把一篇中文翻译成英文一样，但因为这几个翻译
+									的专业程度导致翻译的记过会有差异，这其实就像国内大多数做浏览器的公司，如 360 ， 腾讯这些公司，他们内核起初都是通过IE改进而来。
+									不可否认，IE让我们看到了互联网的世界是什么样子， 但因为技术的更新，IE对很多新的技术支持不是太好，导致它非常的糟糕。所以很多我们
+									目前都会使用如，Chrome,Firefox,Safari,国内浏览器是换皮不换囊，用浏览器还是要用这三种。好了大概浏览器我们说到这里。下面我们通过一张图来
+									了解一下访问网页的工作流程。"</p>
+
+								<p>"我们深度来理解一下浏览网页的时候背后都干了什么， 首先，我们要有一个网址，浏览器首先找到本地网络，检测网络是否连通，然后本地路由器
+									将地址通过DNS解析成IP， 这是网络地址了，提交给远程的计算机，远程计算机必定会有WEB服务，然后通过WEB服务将你访问的文件返回给你，这里
+									如果有服务端语言的话，服务器会解析成浏览器能认识的HTML，浏览器只负责解析HTML，其他的都是远程来搞定的，接下来都是浏览器可解析的HTML了，
+									然后才是你看到的页面。我们来张图。
+								</p>
+
+								<p>
+									<ul class="grid cs-style-2">
+										<li>
+										<figure>
+											<figcaption>
+												<h3>网络拓扑</h3>
+												<span>黑色是访问过程中，红色是返回的。 </span>
+											</figcaption>
+											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew-05.png" width="800" height="600" alt="img12">
+
+										</figure>
+									</li>
+								</ul>
+								</p>
+
+								<p>"我们了解了网页访问的工作流程，接下来我们进入正题，我们访问三国杀www.sanguosha.com的时候，运营商的DNS负责将这个人性化的地址解析成网络地址，就是
+									我们所知道的IP，那么当访问这个文件的时候，我们怎么才能拦截下来，让这个地址的内容是我们可以支配的。这里我再介绍一个工具，就是基于http协议的抓包工具
+									关于挂包工具，一般透明网络我们都用支持http的就可以， TCP/UPD的我们需要用到另外的工具进行抓取，就比如三国杀出牌建房间这些操作，都是进行封包后给了服务器的
+									我们就算抓到了，也是一堆乱码，没什么意义，也可以解包。这样行为就有点过了我们不干。还是用一张图来说明。"</p>
+									<p>
+										<ul class="grid cs-style-2">
+											<li>
+											<figure>
+												<figcaption>
+													<h3>抓包预览</h3>
+													<span>抓包工具有很多，我这个是用的花瓶，[Charles] </span>
+												</figcaption>
+												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew06.png" width="800" height="600" alt="img12">
+											</figure>
+										</li>
+									</ul>
+									</p>
+
+									<p>"通过抓包，假设已知三国杀某张图片的地址为:http://web.sanguosha.com/220/assets/simplified/DianJiang/55.png" 那么我们就用这个地址来实验，我们
+									怎么才能拦截这个地址，不让他去三国杀的服务器中读取，而是读取我们自己的图片呢。这里我们前面也说了，域名都是要经过解析的，这里在我们本地计算机中
+								有个hosts文件，关于hosts文件，这个文件在任何计算机中都存在，他可以让你指定一个域名应该去哪儿访问，那么我们先用这个办法试试。这里需要批评一下三国杀
+							这家公司了，现在全民https了，你还这么low,还在使用http. 更不用说 Referrer Policy 这样的安全级别的应用了。好言归正传，当我们打开这个地址的时候
+						浏览器会返回给我们一个图片，当然这个图片来源是三国杀服务器中。</p>
+										<p>
+
+											<p>
+												<ul class="grid cs-style-2">
+													<li>
+													<figure>
+														<figcaption>
+															<h3>源资源</h3>
+															<span>这张图片是常用武将界面那个小图片</span>
+														</figcaption>
+														<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew07.png" width="800" height="600" alt="img12">
+													</figure>
+												</li>
+											</ul>
+											</p>
+
+											<p>
+												接下来，我们要修改我们的hosts文件，将web.sanguosha.com这个域名指向到我们本地服务，这里我们可能要了解一个web服务，有时候
+												常说web服务器，那么到底是个什么，因为你是基于http协议访问的，http协议端口默认是80，就相当于你对暗号一样，所以
+												我们访问的地址都是com结束了，其实还隐藏一个80.正常的应该是web.sanguosha.com:80，所以这个80到底是谁在开启着呢？我们先修改了
+												hosts看下会发生什么？。
+											</p>
+
+											<p>
+												<ul class="grid cs-style-2">
+													<li>
+													<figure>
+														<figcaption>
+															<h3>修改hosts文件</h3>
+															<span>关于hosts大家自行搜索一下baidu吧，这个很简单。</span>
+														</figcaption>
+														<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew08.png" width="800" height="600" alt="img12">
+													</figure>
+												</li>
+											</ul>
+											</p>
+
+											<p>
+												"我们会发现奇怪的事情发生了，图片找不到了，这是因为什么呢，看图可以看到，我们的hosts文件中，web.sanguosha.com地址被我们指向到
+												了127.0.0.1了， 那么这个127.0.0.1是哪儿呢？ ,  这个地址是我们本地的环回地址，就是你本机，本机默认IP就是这个。当你在浏览器中输入
+												这个IP后，计算机看到这个地址，不会在进行下面各种复杂的网络流传了，直接在你本机找对应的端口访问，前面我们说了，基于浏览器的都默认是
+												80端口，这个时候我们本机是没有开启80端口的，接下来我们开启一个80看看会发生什么事儿？我这里为了方便用一个请便的语言搞一个mini的http
+												服务。关于Nodejs这个语言，可以访问 [ https://nodejs.org/en/ ]有你想要的一切."
+											</p>
+											<p>
+												<ul class="grid cs-style-2">
+
+
+
+													<li>
+													<figure>
+														<figcaption>
+															<h3>创建http服务</h3>
+															<span>我们尽量使用最少的代码实现一个http服务.</span>
+														</figcaption>
+														<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew09.png" width="800" height="600" alt="img12">
+													</figure>
+												</li>
+
+												<li>
+												<figure>
+													<figcaption>
+														<h3>访问预览</h3>
+														<span>我们会发现，这个请求已经被我们拦截下来了。</span>
+													</figcaption>
+													<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew10.png" width="800" height="600" alt="img12">
+												</figure>
+											</li>
+											</ul>
+
+											</p>
+											<p class="highlight_note">
+												"让我们总结一下， 第一步我们通过设置计算机的hosts做到了域名定向到某个ip的目的，访问到了我们自己的计算机。第二步，通过使用一个简单的编程语言nodejs在自己计算机上面开启了一个80端口，使我们的计算机有了web功能，
+												但是问题来 ， 你把整个域名都定向到自己的计算机上面，那么三国杀其他的资源怎么办，因为整个域名都被你指向到了其他地方，所以接下来，我们要做的是，我们只拦截我们关心的地址，其他的都还给凉企。"
+											</p>
+											<p>
+												还是使用我们的那个刚刚那个代码，稍作修改。
+											</p>
+											<pre><code class="language-javascript">//第一版本，只有web功能
+const http = require('http')
+let server = http.createServer( (request , response ) => {});
+server.on('connection' , (err, socket )=>{});
+server.on( 'request' , (request , response ) =>{
+	response.end( 'The request address is  : ' + request.headers['host'] +  request.url);
+})
+server.listen(80);
+</code></pre>
+<pre><code class="language-javascript">//第二版本，web功能+资源替换
+const   http = require('http');
+const   child_process = require("child_process");
+const   mime = require('mime-types');
+const   fs = require("fs");
+let ip = '61.233.140.6';
+let server = http.createServer( (request , response ) => {});
+server.on('connection' , (err, socket )=>{});
+server.on( 'request' , (request , response ) =>{
+    // 这是一张我们个人常用武将里面的那个小图
+    let match = request.url.match(/^\/220\/assets\/simplified\/DianJiang\/55.png/);
+    if (match !== null) {
+        console.log(request.url ,  ' 本地读取  ')
+        //匹配到的就是我们要拦截的，读取我们自己的资源
+        let file = fs.readFileSync("55.png");
+        let contentType = mime.lookup(request.url);
+        response.writeHead(200, {'Content-Type': ''+contentType+'' });
+        response.write(new Buffer(file, 'binary'));
+        response.end();
+    } else {
+        //这里我们会将请求扔回去
+        console.log( request.url,' 远程读取 ' )
+        let curl = 'curl http://'+ip+'/'+ request.url +' -H "X-Forwarded-For: 1.1.1.1" -H "Host: '+ request.headers['host'] +'"';
+        let child = child_process.exec(curl,{encoding: 'binary'} ,function(err, stdout, stderr ) {
+            let contentType = mime.lookup(request.url);
+            response.writeHead(200, {
+              'Content-Type': ''+contentType+'' });
+            response.write(new Buffer(stdout, 'binary'));
+            response.end();
+        })
+    }
+})
+server.listen(80);
+</code></pre>
+<p>
+	当我们运行了第二个版本的代码，你会发现，55.png这张图片已经从我们本地读取了,下图我们将要开启我们的服务.
+</p>
+<p>
+	<ul class="grid cs-style-2">
+
+		<li>
+		<figure>
+			<figcaption>
+				<h3>开启服务</h3>
+				<span>这里是我们终端显示</span>
+			</figcaption>
+			<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew12.png" width="800" alt="img12">
+		</figure>
+	</li>
+	<li>
+	<figure>
+		<figcaption>
+			<h3>服务运行中</h3>
+			<span>你会发现，所有资源除了55.png这张图片，我们都不会拦截.</span>
+		</figcaption>
+		<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew13.png" width="800" alt="img12">
+	</figure>
+</li>
+</ul>
+</p>
+											<p>
+												“基础知识到这里就结束了，接下来章节，我们开始进阶，因为还有很多问题等待我们去解决，我们
+												这里只是一个例子，进阶会详细讲解。”
+											</p>
+								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item3">
+						<div class="content">
+							<div class="scroller">
+								<h2>进阶</h2>
+
+
+								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item4">
+						<div class="content">
+							<div class="scroller">
+								<h2>制作动态皮肤</h2>
+
+
+							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item5">
+						<div class="content">
+							<div class="scroller">
+								<h2>服务化</h2>
+
+
+								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bb-item" id="item6">
+						<div class="content">
+							<div class="scroller">
+								<h2>三国杀拼图应用</h2>
+
+
+								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bb-item" id="item7">
+						<div class="content">
+							<div class="scroller">
+								<h2>结束</h2>
+								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<nav>
+					<span id="bb-nav-prev">&larr;</span>
+					<span id="bb-nav-next">&rarr;</span>
+				</nav>
+
+				<span id="tblcontents" class="menu-button">Table of Contents</span>
+
+			</div>
+
+		</div><!-- /container -->
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/howler/2.0.9/howler.js"></script>
+		<script src="https://cdn.bootcss.com/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+		<script src="https://cdn.bootcss.com/ace/1.3.3/ace.js"></script>
+		<script src="https://cdn.bootcss.com/ace/1.3.3/ext-static_highlight.js"></script>
+		<script src="js/jquery.mousewheel.js"></script>
+		<script src="js/jquery.jscrollpane.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/jquery.bookblock.js"></script>
+		<script src="js/page.js"></script>
+		<script>
+			$(function() {
+				var sound = new Howl({
+				 src: ['http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/audio/sgc.mp3'],
+				 autoplay: true,
+  		  		loop: true
+				});
+
+				sound.play();
+				// imagesLoaded https://imagesloaded.desandro.com
+				new imagesLoaded( document.querySelector('#container'), function( instance ) {
+				  console.log('all images are loaded');
+				});
+				Page.init();
+				// ace
+				function highlight() {
+				    var highlighter = ace.require("ace/ext/static_highlight")
+				    var dom = ace.require("ace/lib/dom")
+				    function qsa(sel) {
+				        var els = document.querySelectorAll(sel);
+				        var result = [];
+				        for (var i = 0, l = els.length; i < l; i++)
+				            result[i] = els[i];
+				        return result;
+				    }
+
+				    qsa("code[class]").forEach(function(el) {
+				        var m = el.className.match(/language-(\w+)|(javascript)/);
+				        if (!m) return
+				        var mode = "ace/mode/" + (m[1] || m[2]);
+				        highlighter.highlight(el, {mode: mode, theme: "ace/theme/eclipse"})
+				    });
+				}
+				highlight()
+			});
+		</script>
+	</body>
+</html>
