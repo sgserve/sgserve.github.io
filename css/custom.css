@@ -391,7 +391,11 @@ img {
 	display: block;
 	position: relative;
 }
-
+.grid figure video {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
 .grid figcaption {
 	/* position: absolute; */
 	top: 0;
@@ -449,7 +453,8 @@ img {
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-
+p span{word-wrap:break-word;
+word-break:break-all; }
 /* .cs-style-2 figcaption a {
 	position: absolute;
 	right: 20px;
