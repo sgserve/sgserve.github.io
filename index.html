@@ -1,85 +1,79 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>三国杀自定义武将动态皮肤教程</title>
-		<meta name="description" content="三国杀自定义武将动态皮肤教程" />
-		<meta name="keywords" content="三国杀, 武将, 动态, 皮肤, 社区, 自定义, 教程" />
-		<meta name="author" content="CUPDIR" />
-		<link rel="icon" type="image/x-icon" class="js-site-favicon" href="public/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
-		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
-		<link rel="stylesheet" type="text/css" href="css/custom.css" />
-		<link href="https://cdn.bootcss.com/video.js/6.8.0/video-js.min.css" rel="stylesheet">
-		<script src="https://cdn.bootcss.com/video.js/6.8.0/ie8/videojs-ie8.min.js"></script>
-		<script src="https://cdn.bootcss.com/video.js/6.8.0/video.min.js"></script>
-		<script src="js/modernizr.custom.79639.js"></script>
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-		<script src="js/analytics.js?ver=20180404124205"></script>
-	</head>
-	<body>
-		<svg class="hidden">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>三国杀自定义武将动态皮肤教程</title>
+	<meta name="description" content="三国杀自定义武将动态皮肤教程" />
+	<meta name="keywords" content="三国杀, 武将, 动态, 皮肤, 社区, 自定义, 教程" />
+	<meta name="author" content="CUPDIR" />
+	<link rel="icon" type="image/x-icon" class="js-site-favicon" href="public/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+	<link href="https://cdn.bootcss.com/video.js/6.8.0/video-js.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/video.js/6.8.0/ie8/videojs-ie8.min.js"></script>
+	<script src="https://cdn.bootcss.com/video.js/6.8.0/video.min.js"></script>
+	<script src="js/modernizr.custom.79639.js"></script>
+	<script>
+		document.documentElement.className = "js";
+		var supportsCssVars = function() {
+			var e, t = document.createElement("style");
+			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+		};
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+	<script src="js/analytics.js?ver=20180404124205"></script>
+</head>
+
+<body>
+	<svg class="hidden">
 			<symbol id="icon-github" viewBox="0 0 32.6 31.8">
 				<title>github</title>
 				<path d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"/>
 			</symbol>
 
 		</svg>
-		<div id="container" class="container">
-			<a class="github" href="https://github.com/sgserve/service" title="this project on GitHub">
+	<div id="container" class="container">
+		<a class="github" href="https://github.com/sgserve/service" title="this project on GitHub">
 					<svg class="github__deco" width="100%" height="100%" viewBox="0 0 200 200">
 						<path d="M 175.6,194.6 C 140.6,193.5 116.7,156.4 86.84,138.3 64.14,124.3 30.23,121.6 18.09,97.94 -2.925,57.04 -0.4009,-5.464 30.58,-39.44 64.64,-76.8 133.6,-87.78 179.7,-67.02 248.9,-35.86 316.7,54.76 297,128 284.9,172.5 221.7,196.1 175.6,194.6 Z"></path>
 					</svg>
 					<svg class="icon icon--github"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-github"></use></svg>
 				</a>
-			<div class="menu-panel">
-				<h3>讲解章节引导</h3>
-				<ul id="menu-toc" class="menu-toc">
-					<li class="menu-toc-current"><a href="#item1">前言</a></li>
-					<li><a href="#item2">原理解答</a></li>
-					<li><a href="#item3">安装</a></li>
-					<li><a href="#item3">使用</a></li>
-					<li><a href="#item7">结束</a></li>
-				</ul>
+		<div class="menu-panel">
+			<h3>讲解章节引导</h3>
+			<ul id="menu-toc" class="menu-toc">
+				<li class="menu-toc-current"><a href="#item1">前言</a></li>
+				<li><a href="#item2">原理解答</a></li>
+				<li><a href="#item3">安装</a></li>
+				<li><a href="#item3">使用</a></li>
+				<li><a href="#item7">结束</a></li>
+			</ul>
 
-			</div>
+		</div>
 
-			<div class="bb-custom-wrapper">
-				<div id="bb-bookblock" class="bb-bookblock">
-					<div class="bb-item" id="item1">
-						<div class="content">
-							<div class="scroller">
-								<h2>前言</h2>
-								<p>大家好，在讲解之前可能我需要和大家介绍一下我本人，
-								这样方便我们以后在社区中进一步的交流，我本人是非常喜欢技术，我年纪比较大了点，
-								这里就有同学要问了，年纪大了，你跑这里和一群孩子玩儿，这里我要说的是，
-								人人都有向往童年的权利。而且，三国杀这款游戏是我很早就接触的，90，00后也算是传承了
-								我们的意志，这里只是我目前还在徘徊中，尚未找到传承者，只能继续玩下去了。到现在也就是玩个情怀，
-								至于情怀这个东西，大家慢慢体会。 那么接下来我再说一下，为什么要写这个教
-								程，前段儿时间，我浏览社区的时候，发现一个大佬，那个积分很高，肯定是社区老人了，目测
-								也是一个爱好技术，自己折腾了不少东西，在这里我给你点赞，其实不管玩什么，在玩的过程中
-								能体会到其他的乐趣也是不错的，然后我看了，倍感欣慰。我发现
-								大佬的方法是使用了一款工具，然后进行本地替换，我很早的时候就做了Nginx替换，但这个确实很复杂，不方便拿出来
-								让同学们使用，工具的话也是用的很不方便， 我就想能不能功能多一点，替换起来更简单一点， 后来我浏览社区的时候看到
-								有社区活动可以积攒积分什么的，我就发了一个帖子，当时就是贴了一下自己的替换成果，没有把我的方法写出来，后来有人
-								来群里找我，这才使我下定决心写一个教程。下面我们就开始吧。
-								</p>
-
-								<p>起初的时候，我用平时工作常用的NGINX,这是一个web代理服务，修改了本地host，把三国杀的静态资源部分地址做了rewrite,相当于
-									把部分的地址劫持了，大家可以用劫持这个词去理解，后来群里的朋友也想要这样的效果，当时觉得总不能让他也去搭建这么一个复杂的环境，
-									这才有了后来我把资源搬到了线上，但是问题来了，线上的话，他们也需要修改host才能达到需求，但手机怎么访问，手机系统很多都是有权限的
-									除非root才能得到想要的效果，也不安全，再后来就专门做了个dns服务，只需要设置一下网络的DNS服务就可以了，这个任何手机都是可以设置的。
-									到时候可以自己找一下。 接下来这才有了我想把他做成一个服务的念想，我当时想自己也喜欢这款游戏，也是因为官方再不通知我的额情况下，
-									擅自修改我花钱买的大屁股，大胸，瞎鸡脖修改，后来才有了这一系列的念想。大概的前因后果我介绍完了，下面我们就进入主题，看看如何在零基础的情况下
-									就可以设置一款自己漂亮的武将皮肤。
-									</p>
-
-								<p>下面我放几张关于本次教程最终达到的效果图，方便大家提前达到预览效果。</p>
-								<p>
-									<ul class="grid cs-style-2">
-										<li>
+		<div class="bb-custom-wrapper">
+			<div id="bb-bookblock" class="bb-bookblock">
+				<div class="bb-item" id="item1">
+					<div class="content">
+						<div class="scroller">
+							<h2>前言</h2>
+							<p>大家好，我是一个三国杀爱好者，由于前端事儿时间三国杀擅自修改皮肤后，我当时为了让皮肤回归本质，写了一个小工具，当时就是
+								为了给自己用，因为有几个人要，我就用闲暇时间完善了一下代码，并放在github,npm上托管了，工具是用Nodejs语言编写，具体怎么用
+								看后面章节。
+							</p>
+							<p>
+								工具大概有几个功能，一个是在玩游戏的途中下载你看到的所有资源，包括静态资源和动态资源。
+								资源替换，这个功能方便官方除了新的皮肤或者动态皮肤后，可以将你现有的皮肤替换成其他的，也可以是自己的照片哦,
+								如果你有flash工具，也可以做动态的.
+							</p>
+							<p>下面我放几张关于本次教程最终达到的效果图，方便大家提前达到预览效果。</p>
+							<p>
+								<ul class="grid cs-style-2">
+									<li>
 										<figure>
 											<figcaption>
 												<h3>武将皮肤界面</h3>
@@ -90,57 +84,51 @@
 										</figure>
 									</li>
 									<li>
-									<figure>
-										<figcaption>
-											<h3>武将皮肤预览</h3>
-											<span>这个妹子是我们当时群里的美女，大家不要问了。 </span>
-										</figcaption>
-										<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew02.png" width="800" height="600" alt="img12">
+										<figure>
+											<figcaption>
+												<h3>武将皮肤预览</h3>
+												<span>这个妹子是我们当时群里的美女，大家不要问了。 </span>
+											</figcaption>
+											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew02.png" width="800" height="600" alt="img12">
 
-									</figure>
-								</li>
-
-
-								<li>
-								<figure>
-									<figcaption>
-										<h3>牌局内的预览</h3>
-										<span>如果你是个三国杀主播的话，这个你也许会很喜欢 </span>
-									</figcaption>
-									<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew03.gif" width="800" height="600" alt="img12">
-
-								</figure>
-							</li>
-									</ul>
-								</p>
-
-								<p>"关于以上所有的的素材图片，都归三国杀官方所有，所有的技术细节都供学习交流使用。如果官方对此有任何的异议，可以联系我，我做下线处理。</p>
+										</figure>
+									</li>
 
 
-								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-							</div>
+									<li>
+										<figure>
+											<figcaption>
+												<h3>牌局内的预览</h3>
+												<span>如果你是个三国杀主播的话，这个你也许会很喜欢 </span>
+											</figcaption>
+											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew03.gif" width="800" height="600" alt="img12">
+
+										</figure>
+									</li>
+								</ul>
+							</p>
+
+							<p>"关于以上所有的的素材图片，都归三国杀官方所有，所有的技术细节都供学习交流使用。如果官方对此有任何的异议，可以联系我，我做下线处理。</p>
+
+
+							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
 						</div>
 					</div>
-					<div class="bb-item" id="item2">
-						<div class="content">
-							<div class="scroller">
-								<h2>原理解答</h2>
-								<p>在开始介绍原理之前，我们首先要了解一下网页访问过程中的工作原理，那么先说下浏览器，浏览器就是我们平时用来浏览网页的时候打开的
-									窗口，关于内核，我们首先了解一下内核是什么？ 很简答， 我们通俗一点理解，它就好比我们让几个翻译把一篇中文翻译成英文一样，但因为这几个翻译
-									的专业程度导致翻译的记过会有差异，这其实就像国内大多数做浏览器的公司，如 360 ， 腾讯这些公司，他们内核起初都是通过IE改进而来。
-									不可否认，IE让我们看到了互联网的世界是什么样子， 但因为技术的更新，IE对很多新的技术支持不是太好，导致它非常的糟糕。所以很多我们
-									目前都会使用如，Chrome,Firefox,Safari,国内浏览器是换皮不换囊，用浏览器还是要用这三种。好了大概浏览器我们说到这里。下面我们通过一张图来
-									了解一下访问网页的工作流程。"</p>
+				</div>
+				<div class="bb-item" id="item2">
+					<div class="content">
+						<div class="scroller">
+							<h2>原理解答</h2>
+							<p>在开始介绍原理之前，我们首先要了解一下网页访问过程中的工作原理，那么先说下浏览器，浏览器就是我们平时用来浏览网页的时候打开的 窗口，关于内核，我们首先了解一下内核是什么？ 很简答， 我们通俗一点理解，它就好比我们让几个翻译把一篇中文翻译成英文一样，但因为这几个翻译 的专业程度导致翻译的记过会有差异，这其实就像国内大多数做浏览器的公司，如 360 ， 腾讯这些公司，他们内核起初都是通过IE改进而来。 不可否认，IE让我们看到了互联网的世界是什么样子， 但因为技术的更新，IE对很多新的技术支持不是太好，导致它非常的糟糕。所以很多我们
+								目前都会使用如，Chrome,Firefox,Safari,国内浏览器是换皮不换囊，用浏览器还是要用这三种。好了大概浏览器我们说到这里。下面我们通过一张图来 了解一下访问网页的工作流程。"
+							</p>
 
-								<p>"我们深度来理解一下浏览网页的时候背后都干了什么， 首先，我们要有一个网址，浏览器首先找到本地网络，检测网络是否连通，然后本地路由器
-									将地址通过DNS解析成IP， 这是网络地址了，提交给远程的计算机，远程计算机必定会有WEB服务，然后通过WEB服务将你访问的文件返回给你，这里
-									如果有服务端语言的话，服务器会解析成浏览器能认识的HTML，浏览器只负责解析HTML，其他的都是远程来搞定的，接下来都是浏览器可解析的HTML了，
-									然后才是你看到的页面。我们来张图。
-								</p>
+							<p>"我们深度来理解一下浏览网页的时候背后都干了什么， 首先，我们要有一个网址，浏览器首先找到本地网络，检测网络是否连通，然后本地路由器 将地址通过DNS解析成IP， 这是网络地址了，提交给远程的计算机，远程计算机必定会有WEB服务，然后通过WEB服务将你访问的文件返回给你，这里 如果有服务端语言的话，服务器会解析成浏览器能认识的HTML，浏览器只负责解析HTML，其他的都是远程来搞定的，接下来都是浏览器可解析的HTML了， 然后才是你看到的页面。我们来张图。
+							</p>
 
-								<p>
-									<ul class="grid cs-style-2">
-										<li>
+							<p>
+								<ul class="grid cs-style-2">
+									<li>
 										<figure>
 											<figcaption>
 												<h3>网络拓扑</h3>
@@ -151,112 +139,100 @@
 										</figure>
 									</li>
 								</ul>
-								</p>
+							</p>
 
-								<p>"我们了解了网页访问的工作流程，接下来我们进入正题，我们访问三国杀www.sanguosha.com的时候，运营商的DNS负责将这个人性化的地址解析成网络地址，就是
-									我们所知道的IP，那么当访问这个文件的时候，我们怎么才能拦截下来，让这个地址的内容是我们可以支配的。这里我再介绍一个工具，就是基于http协议的抓包工具
-									关于挂包工具，一般透明网络我们都用支持http的就可以， TCP/UPD的我们需要用到另外的工具进行抓取，就比如三国杀出牌建房间这些操作，都是进行封包后给了服务器的
-									我们就算抓到了，也是一堆乱码，没什么意义，也可以解包。这样行为就有点过了我们不干。还是用一张图来说明。"</p>
-									<p>
-										<ul class="grid cs-style-2">
-											<li>
+							<p>"我们了解了网页访问的工作流程，接下来我们进入正题，我们访问三国杀www.sanguosha.com的时候，运营商的DNS负责将这个人性化的地址解析成网络地址，就是 我们所知道的IP，那么当访问这个文件的时候，我们怎么才能拦截下来，让这个地址的内容是我们可以支配的。这里我再介绍一个工具，就是基于http协议的抓包工具 关于挂包工具，一般透明网络我们都用支持http的就可以， TCP/UPD的我们需要用到另外的工具进行抓取，就比如三国杀出牌建房间这些操作，都是进行封包后给了服务器的 我们就算抓到了，也是一堆乱码，没什么意义，也可以解包。这样行为就有点过了我们不干。还是用一张图来说明。"
+							</p>
+							<p>
+								<ul class="grid cs-style-2">
+									<li>
+										<figure>
+											<figcaption>
+												<h3>抓包预览</h3>
+												<span>抓包工具有很多，我这个是用的花瓶，[Charles] </span>
+											</figcaption>
+											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew06.png" width="800" height="600" alt="img12">
+										</figure>
+									</li>
+								</ul>
+							</p>
+
+							<p>"通过抓包，假设已知三国杀某张图片的地址为:
+								<span>http://web.sanguosha.com/220/assets/simplified/DianJiang/55.png</span> 那么我们就用这个地址来实验，我们 怎么才能拦截这个地址，不让他去三国杀的服务器中读取，而是读取我们自己的图片呢。这里我们前面也说了，域名都是要经过解析的，这里在我们本地计算机中 有个hosts文件，关于hosts文件，这个文件在任何计算机中都存在，他可以让你指定一个域名应该去哪儿访问，那么我们先用这个办法试试。这里需要批评一下三国杀
+								这家公司了，现在全民https了，你还这么low,还在使用http。好言归正传，当我们打开这个地址的时候 浏览器会返回给我们一个图片，当然这个图片来源是三国杀服务器中。
+							</p>
+							<p>
+
+								<p>
+									<ul class="grid cs-style-2">
+										<li>
 											<figure>
 												<figcaption>
-													<h3>抓包预览</h3>
-													<span>抓包工具有很多，我这个是用的花瓶，[Charles] </span>
+													<h3>源资源</h3>
+													<span>这张图片是常用武将界面那个小图片</span>
 												</figcaption>
-												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew06.png" width="800" height="600" alt="img12">
+												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew07.png" width="800" height="600" alt="img12">
 											</figure>
 										</li>
 									</ul>
-									</p>
+								</p>
 
-									<p>"通过抓包，假设已知三国杀某张图片的地址为:
-										<span>http://web.sanguosha.com/220/assets/simplified/DianJiang/55.png</span>
-										那么我们就用这个地址来实验，我们
-									怎么才能拦截这个地址，不让他去三国杀的服务器中读取，而是读取我们自己的图片呢。这里我们前面也说了，域名都是要经过解析的，这里在我们本地计算机中
-								有个hosts文件，关于hosts文件，这个文件在任何计算机中都存在，他可以让你指定一个域名应该去哪儿访问，那么我们先用这个办法试试。这里需要批评一下三国杀
-							这家公司了，现在全民https了，你还这么low,还在使用http。好言归正传，当我们打开这个地址的时候
-						浏览器会返回给我们一个图片，当然这个图片来源是三国杀服务器中。</p>
-										<p>
+								<p>
+									接下来，我们要修改我们的hosts文件，将web.sanguosha.com这个域名指向到我们本地服务，这里我们可能要了解一个web服务，有时候 常说web服务器，那么到底是个什么，因为你是基于http协议访问的，http协议端口默认是80，就相当于你对暗号一样，所以 我们访问的地址都是com结束了，其实还隐藏一个80.正常的应该是web.sanguosha.com:80，所以这个80到底是谁在开启着呢？我们先修改了 hosts看下会发生什么？。
+								</p>
 
-											<p>
-												<ul class="grid cs-style-2">
-													<li>
-													<figure>
-														<figcaption>
-															<h3>源资源</h3>
-															<span>这张图片是常用武将界面那个小图片</span>
-														</figcaption>
-														<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew07.png" width="800" height="600" alt="img12">
-													</figure>
-												</li>
-											</ul>
-											</p>
+								<p>
+									<ul class="grid cs-style-2">
+										<li>
+											<figure>
+												<figcaption>
+													<h3>修改hosts文件</h3>
+													<span>关于hosts大家自行搜索一下baidu吧，这个很简单。</span>
+												</figcaption>
+												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew08.png" width="800" height="600" alt="img12">
+											</figure>
+										</li>
+									</ul>
+								</p>
 
-											<p>
-												接下来，我们要修改我们的hosts文件，将web.sanguosha.com这个域名指向到我们本地服务，这里我们可能要了解一个web服务，有时候
-												常说web服务器，那么到底是个什么，因为你是基于http协议访问的，http协议端口默认是80，就相当于你对暗号一样，所以
-												我们访问的地址都是com结束了，其实还隐藏一个80.正常的应该是web.sanguosha.com:80，所以这个80到底是谁在开启着呢？我们先修改了
-												hosts看下会发生什么？。
-											</p>
-
-											<p>
-												<ul class="grid cs-style-2">
-													<li>
-													<figure>
-														<figcaption>
-															<h3>修改hosts文件</h3>
-															<span>关于hosts大家自行搜索一下baidu吧，这个很简单。</span>
-														</figcaption>
-														<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew08.png" width="800" height="600" alt="img12">
-													</figure>
-												</li>
-											</ul>
-											</p>
-
-											<p>
-												"我们会发现奇怪的事情发生了，图片找不到了，这是因为什么呢，看图可以看到，我们的hosts文件中，web.sanguosha.com地址被我们指向到
-												了127.0.0.1了， 那么这个127.0.0.1是哪儿呢？ ,  这个地址是我们本地的环回地址，就是你本机，本机默认IP就是这个。当你在浏览器中输入
-												这个IP后，计算机看到这个地址，不会在进行下面各种复杂的网络流传了，直接在你本机找对应的端口访问，前面我们说了，基于浏览器的都默认是
-												80端口，这个时候我们本机是没有开启80端口的，接下来我们开启一个80看看会发生什么事儿？我这里为了方便用一个请便的语言搞一个mini的http
-												服务。关于Nodejs这个语言，可以访问 [ https://nodejs.org/en/ ]有你想要的一切."
-											</p>
-											<p>
-												<ul class="grid cs-style-2">
+								<p>
+									"我们会发现奇怪的事情发生了，图片找不到了，这是因为什么呢，看图可以看到，我们的hosts文件中，web.sanguosha.com地址被我们指向到 了127.0.0.1了， 那么这个127.0.0.1是哪儿呢？ , 这个地址是我们本地的环回地址，就是你本机，本机默认IP就是这个。当你在浏览器中输入 这个IP后，计算机看到这个地址，不会在进行下面各种复杂的网络流传了，直接在你本机找对应的端口访问，前面我们说了，基于浏览器的都默认是 80端口，这个时候我们本机是没有开启80端口的，接下来我们开启一个80看看会发生什么事儿？我这里为了方便用一个请便的语言搞一个mini的http
+									服务。关于Nodejs这个语言，可以访问 [ https://nodejs.org/en/ ]有你想要的一切."
+								</p>
+								<p>
+									<ul class="grid cs-style-2">
 
 
 
-													<li>
-													<figure>
-														<figcaption>
-															<h3>创建http服务</h3>
-															<span>我们尽量使用最少的代码实现一个http服务.</span>
-														</figcaption>
-														<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew09.png" width="800" height="600" alt="img12">
-													</figure>
-												</li>
+										<li>
+											<figure>
+												<figcaption>
+													<h3>创建http服务</h3>
+													<span>我们尽量使用最少的代码实现一个http服务.</span>
+												</figcaption>
+												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew09.png" width="800" height="600" alt="img12">
+											</figure>
+										</li>
 
-												<li>
-												<figure>
-													<figcaption>
-														<h3>访问预览</h3>
-														<span>我们会发现，这个请求已经被我们拦截下来了。</span>
-													</figcaption>
-													<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew10.png" width="800" height="600" alt="img12">
-												</figure>
-											</li>
-											</ul>
+										<li>
+											<figure>
+												<figcaption>
+													<h3>访问预览</h3>
+													<span>我们会发现，这个请求已经被我们拦截下来了。</span>
+												</figcaption>
+												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew10.png" width="800" height="600" alt="img12">
+											</figure>
+										</li>
+									</ul>
 
-											</p>
-											<p class="highlight_note">
-												"让我们总结一下， 第一步我们通过设置计算机的hosts做到了域名定向到某个ip的目的，访问到了我们自己的计算机。第二步，通过使用一个简单的编程语言nodejs在自己计算机上面开启了一个80端口，使我们的计算机有了web功能，
-												但是问题来 ， 你把整个域名都定向到自己的计算机上面，那么三国杀其他的资源怎么办，因为整个域名都被你指向到了其他地方，所以接下来，我们要做的是，我们只拦截我们关心的地址，其他的都还给凉企。"
-											</p>
-											<p>
-												还是使用我们的那个刚刚那个代码，稍作修改。
-											</p>
-											<pre><code class="language-javascript">//第一版本，只有web功能
+								</p>
+								<p class="highlight_note">
+									"让我们总结一下， 第一步我们通过设置计算机的hosts做到了域名定向到某个ip的目的，访问到了我们自己的计算机。第二步，通过使用一个简单的编程语言nodejs在自己计算机上面开启了一个80端口，使我们的计算机有了web功能， 但是问题来 ， 你把整个域名都定向到自己的计算机上面，那么三国杀其他的资源怎么办，因为整个域名都被你指向到了其他地方，所以接下来，我们要做的是，我们只拦截我们关心的地址，其他的都还给凉企。"
+								</p>
+								<p>
+									还是使用我们的那个刚刚那个代码，稍作修改。
+								</p>
+								<pre><code class="language-javascript">//第一版本，只有web功能
 const http = require('http')
 let server = http.createServer( (request , response ) => {});
 server.on('connection' , (err, socket )=>{});
@@ -265,7 +241,7 @@ server.on( 'request' , (request , response ) =>{
 })
 server.listen(80);
 </code></pre>
-<pre><code class="language-javascript">
+								<pre><code class="language-javascript">
 const   http = require('http');
 const   child_process = require("child_process");
 const   mime = require('mime-types');
@@ -303,53 +279,63 @@ server.on( 'request' , (request , response ) =>{
 })
 server.listen(80);
 </code></pre>
-<p>
-	当我们运行了第二个版本的代码，你会发现，55.png这张图片已经从我们本地读取了,下图我们将要开启我们的服务.
-</p>
-<p>
-	<ul class="grid cs-style-2">
+								<p>
+									当我们运行了第二个版本的代码，你会发现，55.png这张图片已经从我们本地读取了,下图我们将要开启我们的服务.
+								</p>
+								<p>
+									<ul class="grid cs-style-2">
 
-		<li>
-		<figure>
-			<figcaption>
-				<h3>开启服务</h3>
-				<span>这里是我们终端显示</span>
-			</figcaption>
-			<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew12.png" width="800" alt="img12">
-		</figure>
-	</li>
-	<li>
-	<figure>
-		<figcaption>
-			<h3>服务运行中</h3>
-			<span>你会发现，所有资源除了55.png这张图片，我们都不会拦截.</span>
-		</figcaption>
-		<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew13.png" width="800" alt="img12">
-	</figure>
-</li>
-</ul>
-</p>
-											<p>
-												“知识点到这里就结束了，接下来的章节是安装使用，我们开始领略一下我们这个自己动手做的工具，到底有多么强大。”
-											</p>
+										<li>
+											<figure>
+												<figcaption>
+													<h3>开启服务</h3>
+													<span>这里是我们终端显示</span>
+												</figcaption>
+												<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew12.png" width="800" alt="img12">
+											</figure>
+										</li>
+										<li>
+											<figure>
+												<figcaption>
+													<h3>服务运行中</h3>
+													<span>你会发现，所有资源除了55.png这张图片，我们都不会拦截.</span>
+												</figcaption>
+												<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew13.png" width="800" alt="img12">
+											</figure>
+										</li>
+									</ul>
+								</p>
+								<p>
+									“知识点到这里就结束了，接下来的章节是安装使用，我们开始领略一下我们这个自己动手做的工具，到底有多么强大。”
+								</p>
 								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-							</div>
 						</div>
 					</div>
-					<div class="bb-item" id="item3">
-						<div class="content">
-							<div class="scroller">
-								<h2>安装</h2>
-								<p>
-									前两章给大家说了一堆废话，其实也是让大家多了解了解原理，比较有的同学还是很喜欢探索未知世界的，
-									在讲解前面两章的时候，我已经将这个小功能工具化了，尽量让喜欢探索的同学轻松上手使用，后面我加了
-									自动下载资源，在玩的过程中，资源就下载完了，也方便替换。那么我们开始吧~还是先来一张图来说明工具的效果.
-								</p>
-								<ul class="grid cs-style-2">
+				</div>
+				<div class="bb-item" id="item3">
+					<div class="content">
+						<div class="scroller">
+							<h2>安装</h2>
+							<p>
+								工具是基于命令行的，所以同学们要自行搞定运行环境，都是很简单的.
+							</p>
+							<p>
+								第一步，下载nodejs环境，可以移步去官方下载对应的系统版本
+								https://nodejs.org/en/
+							</p>
+							<p>
+								第二步，让你的系统支持curl命令,可以去官方下载对应系统版本,
+								https://curl.haxx.se/download.html，windows用户,下载完成后将curl.exe拷贝到C:\Windows\System32目录下,这样在任何位置打开cmd即可使用.
+							</p>
+							<p>
+								第三步，开始安装，https://www.npmjs.com/package/sgsc
+							</p>
+
+							<ul class="grid cs-style-2">
 
 
 
-									<li>
+								<li>
 									<figure>
 										<figcaption>
 											<h3>启动工具</h3>
@@ -360,123 +346,110 @@ server.listen(80);
 								</li>
 
 								<li>
-								<figure>
-									<figcaption>
-										<h3>本地资源目录</h3>
-										<span>这些资源都是被自动下载的</span>
-									</figcaption>
-									<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew17.png" width="800" height="600" alt="img12">
-								</figure>
-							</li>
+									<figure>
+										<figcaption>
+											<h3>本地资源目录</h3>
+											<span>这些资源都是被自动下载的</span>
+										</figcaption>
+										<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew17.png" width="800" height="600" alt="img12">
+									</figure>
+								</li>
 
 							</ul>
 							<p>
 								这里说明一下，三国杀的游戏资源都放在220这个目录下，所以想要替换里面的资源直接打开覆盖就行了。
 							</p>
-							<p>
-								工具是基于nodejs语言开发的，所以在安装之前，需要下载node环境,通过本链接下载。
-								<a class="demo demo--current" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/ </a>
-							</p>
+
 
 							<p>
-								安装好环境以后，如果是windows的用户，可以打开cmd， 运行->cmd,  打开以后命令行里输入‘node’回车来验证是否正确.
-								liunx，macOS同学们可以打开终端运行node来验证。
+								安装好环境以后，如果是windows的用户，可以打开cmd， 运行->cmd, 打开以后命令行里输入‘node’回车来验证是否正确. liunx，macOS同学们可以打开终端运行node来验证。
 							</p>
 							<ul class="grid cs-style-2">
 
 
 
 								<li>
-								<figure>
-									<figcaption>
-										<h3>验证是否安装正确</h3>
-										<span>这个是macOS环境下的，windows打开终端是一样的.</span>
-									</figcaption>
-									<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew18.png" width="800" height="600" alt="img12">
-								</figure>
-							</li>
-						</ul>
-						<p>
-							接下来，我们下载代码并安装，有git的同学可以clone一份代码。[git clone https://github.com/sgserve/service.git]
-							没有的同学下载压缩包 [https://github.com/sgserve/service/archive/master.zip]
-						</p>
-						<p>
-							下载下来后，进入目录，在终端执行 npm i,见下图
-						</p>
-						<p>
+									<figure>
+										<figcaption>
+											<h3>验证是否安装正确</h3>
+											<span>这个是macOS环境下的，windows打开终端是一样的.</span>
+										</figcaption>
+										<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew18.png" width="800" height="600" alt="img12">
+									</figure>
+								</li>
+							</ul>
+							<p>
+								接下来，我们下载代码并安装，有git的同学可以clone一份代码。[git clone https://github.com/sgserve/service.git] 没有的同学下载压缩包 [https://github.com/sgserve/service/archive/master.zip]
+							</p>
+							<p>
+								下载下来后，进入目录，在终端执行 npm i,见下图
+							</p>
+							<p>
+								<ul class="grid cs-style-2">
+
+
+
+									<li>
+										<figure>
+											<figcaption>
+												<h3>目录</h3>
+												<span>看到这三个文件，说明下载完成了</span>
+											</figcaption>
+											<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew19.png" width="800" height="600" alt="img12">
+										</figure>
+									</li>
+								</ul>
+							</p>
+							<p>
+								接下来，在终端输入 `npm i -g sgsc` 即可一键安装.
+							</p>
+							<p>
+								<ul class="grid cs-style-2">
+
+
+
+									<li>
+										<figure>
+											<figcaption>
+												<h3>安装</h3>
+												<span>执行安装</span>
+											</figcaption>
+											<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew20.png" width="800" height="600" alt="img12">
+										</figure>
+									</li>
+
+									<li>
+										<figure>
+											<figcaption>
+												<h3>安装完成</h3>
+												<span>看到这个目录后，说明安装完成了</span>
+											</figcaption>
+											<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew21.png" width="800" height="600" alt="img12">
+										</figure>
+									</li>
+									<li>
+										<figure>
+											<figcaption>
+												<h3>执行命令</h3>
+												<span>执行后，我们会看到一个IP</span>
+											</figcaption>
+											<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew22.png" width="800" height="600" alt="img12">
+										</figure>
+									</li>
+								</ul>
+
+							</p>
+							<p>
+								最后，放了一个视频，方便大家更直观的查看，因为有的同学网络流量原因，所以尽量看图。
+							</p>
 							<ul class="grid cs-style-2">
-
-
-
 								<li>
-								<figure>
-									<figcaption>
-										<h3>目录</h3>
-										<span>看到这三个文件，说明下载完成了</span>
-									</figcaption>
-									<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew19.png" width="800" height="600" alt="img12">
-								</figure>
-							</li>
-						</ul>
-						</p>
-						<p>
-							接下来，在终端输入 npm i 即可一键安装.
-						</p>
-						<p>
-							<ul class="grid cs-style-2">
-
-
-
-								<li>
-								<figure>
-									<figcaption>
-										<h3>安装</h3>
-										<span>执行安装</span>
-									</figcaption>
-									<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew20.png" width="800" height="600" alt="img12">
-								</figure>
-							</li>
-
-							<li>
-							<figure>
-								<figcaption>
-									<h3>安装完成</h3>
-									<span>看到这个目录后，说明安装完成了</span>
-								</figcaption>
-								<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew21.png" width="800" height="600" alt="img12">
-							</figure>
-						</li>
-						<li>
-						<figure>
-							<figcaption>
-								<h3>执行命令</h3>
-								<span>执行后，我们会看到一个IP</span>
-							</figcaption>
-							<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew22.png" width="800" height="600" alt="img12">
-						</figure>
-					</li>
-						</ul>
-
-					</p>
-					<p>
-						最后，放了一个视频，方便大家更直观的查看，因为有的同学网络流量原因，所以尽量看图。
-					</p>
-					<ul class="grid cs-style-2">
-						<li>
-						<figure>
-							<figcaption>
-								<h3>安装视频</h3>
-								<span>使用流量的同学，请慎重。</span>
-							</figcaption>
-							<video
-								id="my-player"
-								width="800"
-								height="600"
-								class="video-js"
-								controls
-								preload="auto"
-								poster="//yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/video01.png"
-								data-setup='{}'>
+									<figure>
+										<figcaption>
+											<h3>安装视频</h3>
+											<span>使用流量的同学，请慎重。</span>
+										</figcaption>
+										<video id="my-player" width="800" height="600" class="video-js" controls preload="auto" poster="//yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/video01.png" data-setup='{}'>
 							  <source src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew23.mp4" type="video/mp4"></source>
 							  <p class="vjs-no-js">
 								To view this video please enable JavaScript, and consider upgrading to a
@@ -486,26 +459,26 @@ server.listen(80);
 								</a>
 							  </p>
 							</video>
-							<!-- <img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew20.png" width="800" height="600" alt="img12"> -->
-						</figure>
-					</li>
-				</ul>
+										<!-- <img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew20.png" width="800" height="600" alt="img12"> -->
+									</figure>
+								</li>
+							</ul>
 
-								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-							</div>
+							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
 						</div>
 					</div>
-					<div class="bb-item" id="item4">
-						<div class="content">
-							<div class="scroller">
-								<h2>使用</h2>
-								<p>
-									安装好以后，接下来就是如何替换资源，在程序目录里面有个config.yaml文件，这个文件里存放你要替换的地址，一行一个。
-								</p>
-								<p>
-									<ul class="grid cs-style-2">
+				</div>
+				<div class="bb-item" id="item4">
+					<div class="content">
+						<div class="scroller">
+							<h2>使用</h2>
+							<p>
+								安装好以后，接下来就是如何替换资源，在程序目录里面有个config.yaml文件，这个文件里存放你要替换的地址，一行一个。
+							</p>
+							<p>
+								<ul class="grid cs-style-2">
 
-										<li>
+									<li>
 										<figure>
 											<figcaption>
 												<h3>config.yaml</h3>
@@ -515,40 +488,31 @@ server.listen(80);
 										</figure>
 									</li>
 									<li>
-									<figure>
-										<figcaption>
-											<h3>config.yaml</h3>
-											<span>文件内容，注意格式, 前面有个“-”字符</span>
-										</figcaption>
-										<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew25.png" width="800" height="600" alt="img12">
-									</figure>
-								</li>
+										<figure>
+											<figcaption>
+												<h3>config.yaml</h3>
+												<span>文件内容，注意格式, 前面有个“-”字符</span>
+											</figcaption>
+											<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew25.png" width="800" height="600" alt="img12">
+										</figure>
+									</li>
 								</ul>
-								</p>
-								<p>
-									config.yaml文件修改了以后要重新启动程序的，这个要注意一下。关于资源地址，你从文件夹里面找就行了，
-									找到想要替换的，就把地址放到config.yaml里面就可以了.重新启动后，清空三国杀客户端的缓存就行了.
-								</p>
-								<p>
-									下面我放一个简单的替换视频
-								</p>
-								<p>
-									<ul class="grid cs-style-2">
-										<li>
+							</p>
+							<p>
+								config.yaml文件修改了以后要重新启动程序的，这个要注意一下。关于资源地址，你从文件夹里面找就行了， 找到想要替换的，就把地址放到config.yaml里面就可以了.重新启动后，清空三国杀客户端的缓存就行了.
+							</p>
+							<p>
+								下面我放一个简单的替换视频
+							</p>
+							<p>
+								<ul class="grid cs-style-2">
+									<li>
 										<figure>
 											<figcaption>
 												<h3>安装视频</h3>
 												<span>使用流量的同学，请慎重。</span>
 											</figcaption>
-											<video
-												id="my-player"
-												width="800"
-												height="600"
-												class="video-js"
-												controls
-												preload="auto"
-												poster="//yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/video02.png"
-												data-setup='{}'>
+											<video id="my-player" width="800" height="600" class="video-js" controls preload="auto" poster="//yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/video02.png" data-setup='{}'>
 											  <source src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/video02.mp4" type="video/mp4"></source>
 											  <p class="vjs-no-js">
 												To view this video please enable JavaScript, and consider upgrading to a
@@ -562,109 +526,112 @@ server.listen(80);
 										</figure>
 									</li>
 								</ul>
-								</p>
-								<p>
-									以上就是我们全部的内容了。
-								</p>
+							</p>
+							<p>
+								以上就是我们全部的内容了。
+							</p>
 							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-							</div>
 						</div>
 					</div>
-					<div class="bb-item" id="item5">
-						<div class="content">
-							<div class="scroller">
-								<h2>结束</h2>
-								<p>
-									这个工具本来不想放出来的，因为前面的帖子有几个小朋友和我要，我就专门利用闲暇时间完善了一下，上手很简单，如果你有什么好的建议和想法
-									告诉我，我只要不忙，都会帮你解决。
-								</p>
-								<p>
-									关于代码请大家不要恶意修改，分享出来是为了让更多的同学加入到技术行列。如果大家依然有问题，请直接加我们的三国杀群[338087542]
-									社区的推广链接，也麻烦大家帮我点击一下，谢了。三国杀官方社区 <a href="http://club.sanguosha.com/?fromuid=50555" target="_blank"> http://club.sanguosha.com/?fromuid=50555 </a>
-								</p>
-								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="bb-item" id="item6">
-						<div class="content">
-							<div class="scroller">
-								<h2>三国杀拼图应用</h2>
-
-
-								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="bb-item" id="item7">
-						<div class="content">
-							<div class="scroller">
-								<h2>结束</h2>
-								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-							</div>
+				</div>
+				<div class="bb-item" id="item5">
+					<div class="content">
+						<div class="scroller">
+							<h2>结束</h2>
+							<p>
+								这个工具本来不想放出来的，因为前面的帖子有几个小朋友和我要，我就专门利用闲暇时间完善了一下，上手很简单，如果你有什么好的建议和想法 告诉我，我只要不忙，都会帮你解决。
+							</p>
+							<p>
+								关于代码请大家不要恶意修改，分享出来是为了让更多的同学加入到技术行列。如果大家依然有问题，请直接加我们的三国杀群[338087542] 社区的推广链接，也麻烦大家帮我点击一下，谢了。三国杀官方社区 <a href="http://club.sanguosha.com/?fromuid=50555" target="_blank"> http://club.sanguosha.com/?fromuid=50555 </a>
+							</p>
+							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
 						</div>
 					</div>
 				</div>
 
-				<nav>
-					<span id="bb-nav-prev">&larr;</span>
-					<span id="bb-nav-next">&rarr;</span>
-				</nav>
+				<div class="bb-item" id="item6">
+					<div class="content">
+						<div class="scroller">
+							<h2>三国杀拼图应用</h2>
 
-				<span id="tblcontents" class="menu-button">Table of Contents</span>
 
+							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="bb-item" id="item7">
+					<div class="content">
+						<div class="scroller">
+							<h2>结束</h2>
+							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
+						</div>
+					</div>
+				</div>
 			</div>
 
-		</div><!-- /container -->
-		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/howler/2.0.9/howler.js"></script>
-		<script src="https://cdn.bootcss.com/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
-		<script src="https://cdn.bootcss.com/ace/1.3.3/ace.js"></script>
-		<script src="https://cdn.bootcss.com/ace/1.3.3/ext-static_highlight.js"></script>
-		<script src="js/jquery.mousewheel.js"></script>
-		<script src="js/jquery.jscrollpane.min.js"></script>
-		<script src="js/jquerypp.custom.js"></script>
-		<script src="js/jquery.bookblock.js"></script>
-		<script src="js/page.js"></script>
-		<script>
-			$(function() {
-				var player = videojs('my-player');
-				var sound = new Howl({
-				 src: ['http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/audio/sgc.mp3'],
-				 autoplay: true,
-  		  		loop: true
-				});
+			<nav>
+				<span id="bb-nav-prev">&larr;</span>
+				<span id="bb-nav-next">&rarr;</span>
+			</nav>
 
-				sound.play();
-				// imagesLoaded https://imagesloaded.desandro.com
-				new imagesLoaded( document.querySelector('#container'), function( instance ) {
-				  console.log('all images are loaded');
-				});
-				Page.init();
-				// ace
-				function highlight() {
-				    var highlighter = ace.require("ace/ext/static_highlight")
-				    var dom = ace.require("ace/lib/dom")
-				    function qsa(sel) {
-				        var els = document.querySelectorAll(sel);
-				        var result = [];
-				        for (var i = 0, l = els.length; i < l; i++)
-				            result[i] = els[i];
-				        return result;
-				    }
+			<span id="tblcontents" class="menu-button">Table of Contents</span>
 
-				    qsa("code[class]").forEach(function(el) {
-				        var m = el.className.match(/language-(\w+)|(javascript)/);
-				        if (!m) return
-				        var mode = "ace/mode/" + (m[1] || m[2]);
-				        highlighter.highlight(el, {mode: mode, theme: "ace/theme/eclipse"})
-				    });
-				}
-				highlight()
+		</div>
+
+	</div>
+	<!-- /container -->
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/howler/2.0.9/howler.js"></script>
+	<script src="https://cdn.bootcss.com/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+	<script src="https://cdn.bootcss.com/ace/1.3.3/ace.js"></script>
+	<script src="https://cdn.bootcss.com/ace/1.3.3/ext-static_highlight.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.jscrollpane.min.js"></script>
+	<script src="js/jquerypp.custom.js"></script>
+	<script src="js/jquery.bookblock.js"></script>
+	<script src="js/page.js"></script>
+	<script>
+		$(function() {
+			var player = videojs('my-player');
+			var sound = new Howl({
+				src: ['http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/audio/sgc.mp3'],
+				autoplay: true,
+				loop: true
 			});
 
-		</script>
-	</body>
+			sound.play();
+			// imagesLoaded https://imagesloaded.desandro.com
+			new imagesLoaded(document.querySelector('#container'), function(instance) {
+				console.log('all images are loaded');
+			});
+			Page.init();
+			// ace
+			function highlight() {
+				var highlighter = ace.require("ace/ext/static_highlight")
+				var dom = ace.require("ace/lib/dom")
+
+				function qsa(sel) {
+					var els = document.querySelectorAll(sel);
+					var result = [];
+					for (var i = 0, l = els.length; i < l; i++)
+						result[i] = els[i];
+					return result;
+				}
+
+				qsa("code[class]").forEach(function(el) {
+					var m = el.className.match(/language-(\w+)|(javascript)/);
+					if (!m) return
+					var mode = "ace/mode/" + (m[1] || m[2]);
+					highlighter.highlight(el, {
+						mode: mode,
+						theme: "ace/theme/eclipse"
+					})
+				});
+			}
+			highlight()
+		});
+	</script>
+</body>
+
 </html>
