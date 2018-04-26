@@ -5,7 +5,9 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>樱花树下樱花雨 ， 一生一世在一起 。<樱花雨></title>
+	<title>樱花树下樱花雨 ， 一生一世在一起 。
+		<樱花雨>
+	</title>
 	<meta name="description" content="这是个属于自己的相册." />
 	<meta name="keywords" content="照片,三国杀,个人,美女" />
 	<meta name="author" content="CUPDIR" />
@@ -95,10 +97,14 @@
 					</a>
 				</div>
 				<div class="grid__item" id="removeitem" data-size="404x521" style="">
-					<div class="face front "></div>
-					<a href="img/original/7.gif" class="img-wrap"><img src="img/thumbs/7.gif" alt="img07" />
-						<div class="description description--grid">#07</div>
-					</a>
+					<div id="card-1" class="card">
+						<a class="" rel="external" href="http://club.sanguosha.com/?fromuid=164561" target="_blank">
+							<img src="img/thumbs/8.png" class="front" style="max-width: 100%;" alt="img08" />
+						</a>
+
+						<img src="img/thumbs/7.gif" class="back" style="max-width: 100%;" alt="img07" />
+					</div>
+
 				</div>
 			</div>
 			<!-- /grid -->
@@ -111,60 +117,92 @@
 		<!-- /content -->
 
 	</div>
+
+
 	<!-- /container -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdn.bootcss.com/jQuery-Flip/1.1.2/jquery.flip.min.js"></script>
 	<script src="https://cdn.bootcss.com/howler/2.0.9/howler.js"></script>
 	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/main.js"></script>
 	<script>
-
+	var is_open = false;
+	$("a[href^='http://']").click(function(){
+		if( is_open == false ){
+			is_open =  true;
+			$("#card-1").flip('toggle')
+			return true;
+		}
+		$("#card-1").flip('toggle')
+	 	return false;
+	});
 		(function() {
-			
+			var sound = new Howl({
+				src: ['http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/mp3/hui.mp3'],
+				autoplay: true,
+				loop: true
+			});
+			sound.play();
+			$("#card-1").flip({axis: 'y', trigger: 'click',autoSize:false});
+			$("#card-1").on('flip:done',function(){
+
+
+				//window.location.href="http://club.sanguosha.com/?fromuid=164561";
+			});
 			var mainContainer = document.querySelector('.container'),
 				soundCtrl = mainContainer.querySelector('button.button--sound'),
 				isAudioOn = true;
 			soundCtrl.addEventListener('click', function() {
-				if( !isAudioOn ) {
+				if (!isAudioOn) {
 					sound.mute(false);
 					soundCtrl.classList.remove('button--sound-off');
-				}
-				else {
+				} else {
 					sound.mute(true);
 					soundCtrl.classList.add('button--sound-off');
 				}
 				isAudioOn = !isAudioOn;
 			});
 
-			var support = { transitions: Modernizr.csstransitions },
-				transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
-				transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-				onEndTransition = function( el, callback ) {
-					var onEndCallbackFn = function( ev ) {
-						if( support.transitions ) {
-							if( ev.target != this ) return;
-							this.removeEventListener( transEndEventName, onEndCallbackFn );
+			var support = {
+					transitions: Modernizr.csstransitions
+				},
+				transEndEventNames = {
+					'WebkitTransition': 'webkitTransitionEnd',
+					'MozTransition': 'transitionend',
+					'OTransition': 'oTransitionEnd',
+					'msTransition': 'MSTransitionEnd',
+					'transition': 'transitionend'
+				},
+				transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+				onEndTransition = function(el, callback) {
+					var onEndCallbackFn = function(ev) {
+						if (support.transitions) {
+							if (ev.target != this) return;
+							this.removeEventListener(transEndEventName, onEndCallbackFn);
 						}
-						if( callback && typeof callback === 'function' ) { callback.call(this); }
+						if (callback && typeof callback === 'function') {
+							callback.call(this);
+						}
 					};
-					if( support.transitions ) {
-						el.addEventListener( transEndEventName, onEndCallbackFn );
-					}
-					else {
+					if (support.transitions) {
+						el.addEventListener(transEndEventName, onEndCallbackFn);
+					} else {
 						onEndCallbackFn();
 					}
 				};
 
-				new GridFx(document.querySelector('.grid'), {
-				imgPosition : {
-					x : 1,
-					y : 0.75
+			new GridFx(document.querySelector('.grid'), {
+				imgPosition: {
+					x: 1,
+					y: 0.75
 				},
-				pagemargin : 50,
-				onOpenItem : function(instance, item) {
-					console.log( item )
+				pagemargin: 50,
+				onOpenItem: function(instance, item) {
+					console.log(item)
 					instance.items.forEach(function(el) {
-						if(item != el) {
+						if (item != el) {
 							var delay = Math.floor(Math.random() * 150);
 							el.style.WebkitTransition = 'opacity .4s ' + delay + 'ms cubic-bezier(.7,0,.3,1), -webkit-transform .4s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
 							el.style.transition = 'opacity .4s ' + delay + 'ms cubic-bezier(.7,0,.3,1), transform .4s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
@@ -175,9 +213,9 @@
 						}
 					});
 				},
-				onCloseItem : function(instance, item) {
+				onCloseItem: function(instance, item) {
 					instance.items.forEach(function(el) {
-						if(item != el) {
+						if (item != el) {
 							el.style.WebkitTransition = 'opacity .3s, -webkit-transform .3s';
 							el.style.transition = 'opacity .3s, transform .3s';
 
