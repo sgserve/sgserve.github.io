@@ -111,7 +111,7 @@
 				isFitWidth : true
 			});
 
-			document.body.classList.remove('loading');
+
 			// show grid after all images (thumbs) are loaded
 			classie.add(self.gridEl, 'grid--loaded');
 			// init/bind events
@@ -311,7 +311,7 @@
 
 		classie.remove(this.previewEl, 'preview--open');
 		classie.remove(this.previewEl, 'preview--image-loaded');
-
+	
 		// callback
 		this.options.onCloseItem(this, gridItem);
 

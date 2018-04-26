@@ -34,7 +34,7 @@
 body {
 	font-family: "Avenir Next", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
 	color: #fff;
-	background: #252323;
+	background: var(--color-bg);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-y: scroll;
@@ -45,7 +45,7 @@ body {
 
 a {
 	outline: none;
-	
+
 	text-decoration: none;
 }
 
@@ -68,7 +68,7 @@ button:focus {
 
 /* Fade effect */
 .js body {
-	opacity: 0;
+	opacity: 1;
 	transition: opacity 0.3s;
 }
 
