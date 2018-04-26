@@ -110,6 +110,13 @@
 				itemSelector: '.grid__item',
 				isFitWidth : true
 			});
+			var sound = new Howl({
+				src: ['hui.mp3'],
+				autoplay: true,
+				loop: true
+			});
+			sound.play();
+			document.body.classList.remove('loading');
 			// show grid after all images (thumbs) are loaded
 			classie.add(self.gridEl, 'grid--loaded');
 			// init/bind events

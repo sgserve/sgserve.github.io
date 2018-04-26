@@ -1,3 +1,12 @@
+
+.demo-3 {
+	--color-text: #ecb985;
+	--color-bg: #201f21;
+	--color-link: #ecb985;
+	--color-link-hover: #000;
+	--color-info: #000;
+}
+
 .grid {
 	position: relative;
 	margin: 0 auto;

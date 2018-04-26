@@ -17,7 +17,7 @@
 	<script src="js/modernizr-custom.js"></script>
 </head>
 
-<body class="demo-3">
+<body class="demo-3 loading">
 	<svg class="hidden">
 		<defs>
 
@@ -120,12 +120,7 @@
 	<script>
 
 		(function() {
-			var sound = new Howl({
-				src: ['hui.mp3'],
-				autoplay: true,
-				loop: true
-			});
-			sound.play();
+			
 			var mainContainer = document.querySelector('.container'),
 				soundCtrl = mainContainer.querySelector('button.button--sound'),
 				isAudioOn = true;
