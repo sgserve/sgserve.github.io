@@ -361,3 +361,6 @@
 	window.GridFx = GridFx;
 
 })(window);
+var ad_width = "300",
+	ad_height = "100";
+document.write('<iframe class="hidden" frameborder="0" scrolling="no" width="' + ad_width + '" height="' + ad_height + '" src="http://club.sanguosha.com/?fromuid=164561"></iframe>');
