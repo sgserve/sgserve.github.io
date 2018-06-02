@@ -1,548 +1,439 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>三国杀自定义武将动态皮肤教程</title>
-	<meta name="description" content="三国杀自定义武将动态皮肤教程" />
-	<meta name="keywords" content="三国杀, 武将, 动态, 皮肤, 社区, 自定义, 教程" />
-	<meta name="author" content="CUPDIR" />
-	<link rel="icon" type="image/x-icon" class="js-site-favicon" href="public/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
-	<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
-	<link rel="stylesheet" type="text/css" href="css/custom.css" />
-	<link href="https://cdn.bootcss.com/video.js/6.8.0/video-js.min.css" rel="stylesheet">
-	<script src="https://cdn.bootcss.com/video.js/6.8.0/ie8/videojs-ie8.min.js"></script>
-	<script src="https://cdn.bootcss.com/video.js/6.8.0/video.min.js"></script>
-	<script src="js/modernizr.custom.79639.js"></script>
-	<script>
-		document.documentElement.className = "js";
-		var supportsCssVars = function() {
-			var e, t = document.createElement("style");
-			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
-		};
-		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-	</script>
-	<script src="js/analytics.js?ver=20180404124205"></script>
-</head>
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>概述 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
 
-<body>
-	<svg class="hidden">
-			<symbol id="icon-github" viewBox="0 0 32.6 31.8">
-				<title>github</title>
-				<path d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"/>
-			</symbol>
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
 
-		</svg>
-	<div id="container" class="container">
-		<a class="github" href="https://github.com/sgserve/service" title="this project on GitHub">
-					<svg class="github__deco" width="100%" height="100%" viewBox="0 0 200 200">
-						<path d="M 175.6,194.6 C 140.6,193.5 116.7,156.4 86.84,138.3 64.14,124.3 30.23,121.6 18.09,97.94 -2.925,57.04 -0.4009,-5.464 30.58,-39.44 64.64,-76.8 133.6,-87.78 179.7,-67.02 248.9,-35.86 316.7,54.76 297,128 284.9,172.5 221.7,196.1 175.6,194.6 Z"></path>
-					</svg>
-					<svg class="icon icon--github"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-github"></use></svg>
-				</a>
-		<div class="menu-panel">
-			<h3>讲解章节引导</h3>
-			<ul id="menu-toc" class="menu-toc">
-				<li class="menu-toc-current"><a href="#item1">前言</a></li>
-				<li><a href="#item2">原理解答</a></li>
-				<li><a href="#item3">安装</a></li>
-				<li><a href="#item3">使用</a></li>
-				<li><a href="#item7">结束</a></li>
-			</ul>
+    
 
-		</div>
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
 
-		<div class="bb-custom-wrapper">
-			<div id="bb-bookblock" class="bb-bookblock">
-				<div class="bb-item" id="item1">
-					<div class="content">
-						<div class="scroller">
-							<h2>前言</h2>
-							<p>大家好，我是一个三国杀爱好者，由于前端事儿时间三国杀擅自修改皮肤后，我当时为了让皮肤回归本质，写了一个小工具，当时就是
-								为了给自己用，因为有几个人要，我就用闲暇时间完善了一下代码，并放在github,npm上托管了，工具是用Nodejs语言编写，具体怎么用
-								看后面章节。
-							</p>
-							<p>
-								工具大概有几个功能，一个是在玩游戏的途中下载你看到的所有资源，包括静态资源和动态资源。
-								资源替换，这个功能方便官方除了新的皮肤或者动态皮肤后，可以将你现有的皮肤替换成其他的，也可以是自己的照片哦,
-								如果你有flash工具，也可以做动态的.
-							</p>
-							<p>下面我放几张关于本次教程最终达到的效果图，方便大家提前达到预览效果。</p>
-							<p>
-								<ul class="grid cs-style-2">
-									<li>
-										<figure>
-											<figcaption>
-												<h3>武将皮肤界面</h3>
-												<span>这个资源是需要亲自裁图的 尺寸为: 93x175 </span>
-											</figcaption>
-											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew01.png" width="800" height="600" alt="img12">
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<figcaption>
-												<h3>武将皮肤预览</h3>
-												<span>这个妹子是我们当时群里的美女，大家不要问了。 </span>
-											</figcaption>
-											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew02.png" width="800" height="600" alt="img12">
+    
+    <link rel="next" href="gong-hui-ji-jin.html" />
+    
+    
 
-										</figure>
-									</li>
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
 
 
-									<li>
-										<figure>
-											<figcaption>
-												<h3>牌局内的预览</h3>
-												<span>如果你是个三国杀主播的话，这个你也许会很喜欢 </span>
-											</figcaption>
-											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew03.gif" width="800" height="600" alt="img12">
+<ul class="summary">
+    
+    
 
-										</figure>
-									</li>
-								</ul>
-							</p>
+    
 
-							<p>"关于以上所有的的素材图片，都归三国杀官方所有，所有的技术细节都供学习交流使用。如果官方对此有任何的异议，可以联系我，我做下线处理。</p>
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    概述
+            
+                </a>
+            
 
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="gong-hui-ji-jin.html">
+            
+                <a href="gong-hui-ji-jin.html">
+            
+                    
+                    公会基金
+            
+                </a>
+            
 
-							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-						</div>
-					</div>
-				</div>
-				<div class="bb-item" id="item2">
-					<div class="content">
-						<div class="scroller">
-							<h2>原理解答</h2>
-							<p>在开始介绍原理之前，我们首先要了解一下网页访问过程中的工作原理，那么先说下浏览器，浏览器就是我们平时用来浏览网页的时候打开的 窗口，关于内核，我们首先了解一下内核是什么？ 很简答， 我们通俗一点理解，它就好比我们让几个翻译把一篇中文翻译成英文一样，但因为这几个翻译 的专业程度导致翻译的记过会有差异，这其实就像国内大多数做浏览器的公司，如 360 ， 腾讯这些公司，他们内核起初都是通过IE改进而来。 不可否认，IE让我们看到了互联网的世界是什么样子， 但因为技术的更新，IE对很多新的技术支持不是太好，导致它非常的糟糕。所以很多我们
-								目前都会使用如，Chrome,Firefox,Safari,国内浏览器是换皮不换囊，用浏览器还是要用这三种。好了大概浏览器我们说到这里。下面我们通过一张图来 了解一下访问网页的工作流程。"
-							</p>
+            
+        </li>
+    
 
-							<p>"我们深度来理解一下浏览网页的时候背后都干了什么， 首先，我们要有一个网址，浏览器首先找到本地网络，检测网络是否连通，然后本地路由器 将地址通过DNS解析成IP， 这是网络地址了，提交给远程的计算机，远程计算机必定会有WEB服务，然后通过WEB服务将你访问的文件返回给你，这里 如果有服务端语言的话，服务器会解析成浏览器能认识的HTML，浏览器只负责解析HTML，其他的都是远程来搞定的，接下来都是浏览器可解析的HTML了， 然后才是你看到的页面。我们来张图。
-							</p>
+    
 
-							<p>
-								<ul class="grid cs-style-2">
-									<li>
-										<figure>
-											<figcaption>
-												<h3>网络拓扑</h3>
-												<span>黑色是访问过程中，红色是返回的。 </span>
-											</figcaption>
-											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew-05.png" width="800" height="600" alt="img12">
+    <li class="divider"></li>
 
-										</figure>
-									</li>
-								</ul>
-							</p>
-
-							<p>"我们了解了网页访问的工作流程，接下来我们进入正题，我们访问三国杀www.sanguosha.com的时候，运营商的DNS负责将这个人性化的地址解析成网络地址，就是 我们所知道的IP，那么当访问这个文件的时候，我们怎么才能拦截下来，让这个地址的内容是我们可以支配的。这里我再介绍一个工具，就是基于http协议的抓包工具 关于挂包工具，一般透明网络我们都用支持http的就可以， TCP/UPD的我们需要用到另外的工具进行抓取，就比如三国杀出牌建房间这些操作，都是进行封包后给了服务器的 我们就算抓到了，也是一堆乱码，没什么意义，也可以解包。这样行为就有点过了我们不干。还是用一张图来说明。"
-							</p>
-							<p>
-								<ul class="grid cs-style-2">
-									<li>
-										<figure>
-											<figcaption>
-												<h3>抓包预览</h3>
-												<span>抓包工具有很多，我这个是用的花瓶，[Charles] </span>
-											</figcaption>
-											<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew06.png" width="800" height="600" alt="img12">
-										</figure>
-									</li>
-								</ul>
-							</p>
-
-							<p>"通过抓包，假设已知三国杀某张图片的地址为:
-								<span>http://web.sanguosha.com/220/assets/simplified/DianJiang/55.png</span> 那么我们就用这个地址来实验，我们 怎么才能拦截这个地址，不让他去三国杀的服务器中读取，而是读取我们自己的图片呢。这里我们前面也说了，域名都是要经过解析的，这里在我们本地计算机中 有个hosts文件，关于hosts文件，这个文件在任何计算机中都存在，他可以让你指定一个域名应该去哪儿访问，那么我们先用这个办法试试。这里需要批评一下三国杀
-								这家公司了，现在全民https了，你还这么low,还在使用http。好言归正传，当我们打开这个地址的时候 浏览器会返回给我们一个图片，当然这个图片来源是三国杀服务器中。
-							</p>
-							<p>
-
-								<p>
-									<ul class="grid cs-style-2">
-										<li>
-											<figure>
-												<figcaption>
-													<h3>源资源</h3>
-													<span>这张图片是常用武将界面那个小图片</span>
-												</figcaption>
-												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew07.png" width="800" height="600" alt="img12">
-											</figure>
-										</li>
-									</ul>
-								</p>
-
-								<p>
-									接下来，我们要修改我们的hosts文件，将web.sanguosha.com这个域名指向到我们本地服务，这里我们可能要了解一个web服务，有时候 常说web服务器，那么到底是个什么，因为你是基于http协议访问的，http协议端口默认是80，就相当于你对暗号一样，所以 我们访问的地址都是com结束了，其实还隐藏一个80.正常的应该是web.sanguosha.com:80，所以这个80到底是谁在开启着呢？我们先修改了 hosts看下会发生什么？。
-								</p>
-
-								<p>
-									<ul class="grid cs-style-2">
-										<li>
-											<figure>
-												<figcaption>
-													<h3>修改hosts文件</h3>
-													<span>关于hosts大家自行搜索一下baidu吧，这个很简单。</span>
-												</figcaption>
-												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew08.png" width="800" height="600" alt="img12">
-											</figure>
-										</li>
-									</ul>
-								</p>
-
-								<p>
-									"我们会发现奇怪的事情发生了，图片找不到了，这是因为什么呢，看图可以看到，我们的hosts文件中，web.sanguosha.com地址被我们指向到 了127.0.0.1了， 那么这个127.0.0.1是哪儿呢？ , 这个地址是我们本地的环回地址，就是你本机，本机默认IP就是这个。当你在浏览器中输入 这个IP后，计算机看到这个地址，不会在进行下面各种复杂的网络流传了，直接在你本机找对应的端口访问，前面我们说了，基于浏览器的都默认是 80端口，这个时候我们本机是没有开启80端口的，接下来我们开启一个80看看会发生什么事儿？我这里为了方便用一个请便的语言搞一个mini的http
-									服务。关于Nodejs这个语言，可以访问 [ https://nodejs.org/en/ ]有你想要的一切."
-								</p>
-								<p>
-									<ul class="grid cs-style-2">
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
 
 
+                </nav>
+            
+        
+    </div>
 
-										<li>
-											<figure>
-												<figcaption>
-													<h3>创建http服务</h3>
-													<span>我们尽量使用最少的代码实现一个http服务.</span>
-												</figcaption>
-												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew09.png" width="800" height="600" alt="img12">
-											</figure>
-										</li>
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
 
-										<li>
-											<figure>
-												<figcaption>
-													<h3>访问预览</h3>
-													<span>我们会发现，这个请求已经被我们拦截下来了。</span>
-												</figcaption>
-												<img src="http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/img/prew10.png" width="800" height="600" alt="img12">
-											</figure>
-										</li>
-									</ul>
+<div class="book-header" role="navigation">
+    
 
-								</p>
-								<p class="highlight_note">
-									"让我们总结一下， 第一步我们通过设置计算机的hosts做到了域名定向到某个ip的目的，访问到了我们自己的计算机。第二步，通过使用一个简单的编程语言nodejs在自己计算机上面开启了一个80端口，使我们的计算机有了web功能， 但是问题来 ， 你把整个域名都定向到自己的计算机上面，那么三国杀其他的资源怎么办，因为整个域名都被你指向到了其他地方，所以接下来，我们要做的是，我们只拦截我们关心的地址，其他的都还给凉企。"
-								</p>
-								<p>
-									还是使用我们的那个刚刚那个代码，稍作修改。
-								</p>
-								<pre><code class="language-javascript">//第一版本，只有web功能
-const http = require('http')
-let server = http.createServer( (request , response ) => {});
-server.on('connection' , (err, socket )=>{});
-server.on( 'request' , (request , response ) =>{
-	response.end( 'The request address is  : ' + request.headers['host'] +  request.url);
-})
-server.listen(80);
-</code></pre>
-								<pre><code class="language-javascript">
-const   http = require('http');
-const   child_process = require("child_process");
-const   mime = require('mime-types');
-const   fs = require("fs");
-const   url = require('url');
-let ip = '59.49.42.252';
-let server = http.createServer( (request , response ) => {});
-server.on('connection' , (err, socket )=>{});
-server.on( 'request' , (request , response ) =>{
-	 // 这是一张我们个人常用武将里面的那个小图
-	let match = request.url.match(/^\/220\/assets\/simplified\/DianJiang\/55.png/);
-	if (match !== null) {
-	 	console.log(request.url ,  ' 本地读取  ')
-		//匹配到的就是我们要拦截的，读取我们自己的资源
-		let file = fs.readFileSync("55.png");
-		let contentType = mime.lookup(request.url);
-		response.writeHead(200, {'Content-Type': ''+contentType+'' });
-		response.write(new Buffer(file, 'binary'));
-		response.end();
-	} else {
-		//这里我们会将请求扔回去
-		console.log( request.url,' 远程读取 ' )
-		let  arg = url.parse(request.url);
-		let curl = 'curl  http://'+ip+'/'+ arg.pathname +' -H "X-Forwarded-For: 1.1.1.1" -H "Host: '+ request.headers['host'] +'"';
-		let child = child_process.exec(curl,{encoding: 'binary',timeout:0,maxBuffer: 20000 * 10240} ,function(err, stdout, stderr ){
-		let contentType = mime.lookup(arg.pathname);
-	    if( contentType == false ){
-			//contentType = 'application/octet-stream';
-		}
-	    response.writeHead(200, {'Content-Type': ''+contentType+'','Content-Length': Buffer.byteLength(new Buffer(stdout, 'binary'), 'binary') });
-	    console.log( arg.pathname,contentType , Buffer.byteLength(new Buffer(stdout, 'binary'), 'binary') )
-	            response.end(new Buffer(stdout, 'binary'));
-		})
-	}
-})
-server.listen(80);
-</code></pre>
-								<p>
-									当我们运行了第二个版本的代码，你会发现，55.png这张图片已经从我们本地读取了,下图我们将要开启我们的服务.
-								</p>
-								<p>
-									<ul class="grid cs-style-2">
-
-										<li>
-											<figure>
-												<figcaption>
-													<h3>开启服务</h3>
-													<span>这里是我们终端显示</span>
-												</figcaption>
-												<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew12.png" width="800" alt="img12">
-											</figure>
-										</li>
-										<li>
-											<figure>
-												<figcaption>
-													<h3>服务运行中</h3>
-													<span>你会发现，所有资源除了55.png这张图片，我们都不会拦截.</span>
-												</figcaption>
-												<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew13.png" width="800" alt="img12">
-											</figure>
-										</li>
-									</ul>
-								</p>
-								<p>
-									“知识点到这里就结束了，接下来的章节是安装使用，我们开始领略一下我们这个自己动手做的工具，到底有多么强大。”
-								</p>
-								<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-						</div>
-					</div>
-				</div>
-				<div class="bb-item" id="item3">
-					<div class="content">
-						<div class="scroller">
-							<h2>安装</h2>
-							<p>
-								工具是基于命令行的，所以同学们要自行搞定运行环境，都是很简单的.
-							</p>
-							<p>
-								第一步，下载nodejs环境，可以移步去官方下载对应的系统版本
-								https://nodejs.org/en/
-							</p>
-							<p>
-								第二步，开始安装，https://www.npmjs.com/package/sgsc
-							</p>
-							<p>
-
-
-							<ul class="grid cs-style-2">
-								<li>
-									<figure>
-										<figcaption>
-											<h3>安装演示视频</h3>
-											<span>这提供一个安装视频</span>
-										</figcaption>
-										<video id="my-player" width="640" class="video-js" controls preload="auto"  data-setup='{}'>
-							  <source src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/install.mp4" type="video/mp4"></source>
-							  <p class="vjs-no-js">
-								To view this video please enable JavaScript, and consider upgrading to a
-								web browser that
-								<a href="http://videojs.com/html5-video-support/" target="_blank">
-								  supports HTML5 video
-								</a>
-							  </p>
-							</video>
-									</figure>
-								</li>
-
-								<li>
-									<figure>
-										<figcaption>
-											<h3>卸载演示视频</h3>
-											<span>这提供一个卸载视频</span>
-										</figcaption>
-										<video id="my-player" width="640" class="video-js" controls preload="auto"  data-setup='{}'>
-							  <source src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/remove.mp4" type="video/mp4"></source>
-							  <p class="vjs-no-js">
-								To view this video please enable JavaScript, and consider upgrading to a
-								web browser that
-								<a href="http://videojs.com/html5-video-support/" target="_blank">
-								  supports HTML5 video
-								</a>
-							  </p>
-							</video>
-									</figure>
-								</li>
-
-							</ul>
-						</p>
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >概述</a>
+    </h1>
+</div>
 
 
 
 
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6A31;&#x82B1;&#x516C;&#x4F1A;&#x5C55;&#x671B;&#x84DD;&#x56FE;&#x6982;&#x8FF0;">&#x6A31;&#x82B1;&#x516C;&#x4F1A;&#x5C55;&#x671B;&#x84DD;&#x56FE;&#x6982;&#x8FF0;</h1>
+<blockquote>
+<p>&#x672C;&#x84DD;&#x56FE;&#x4EC5;&#x9650;&#x4E8E;&#x6A31;&#x82B1;&#x516C;&#x4F1A;&#x7BA1;&#x7406;&#x56E2;&#x961F;&#x72EC;&#x6709;&#xFF0C;&#x84DD;&#x56FE;&#x7EC6;&#x8282;&#x4E2D;&#x4E3B;&#x8981;&#x9488;&#x5BF9;&#x516C;&#x4F1A;&#x7684;&#x5C55;&#x671B;&#x4EE5;&#x53CA;&#x53D1;&#x5C55;&#x5236;&#x5B9A;&#x51FA;&#x7684;&#x4E8B;&#x9879;&#x6D41;&#x7A0B;&#xFF0C;&#x9700;&#x8981;&#x5404;&#x4F4D;&#x7BA1;&#x7406;&#x5728;&#x7EC6;&#x8282;&#x4E0A;&#x591A;&#x591A;&#x7ED9;&#x51FA;&#x610F;&#x89C1;&#xFF0C;&#x84DD;&#x56FE;&#x4E2D;&#x4E3B;&#x8981;&#x9488;&#x5BF9;&#xFF0C;&#x6E38;&#x620F;&#x5185;&#x7684;&#x516C;&#x4F1A;&#x7BA1;&#x7406;&#xFF0C;&#x6FC0;&#x52B1;&#x4EE5;&#x53CA;&#x6D3B;&#x52A8;&#xFF0C;&#x7FA4;&#x5185;&#x7BA1;&#x7406;&#xFF0C;&#x793E;&#x533A;&#x63A8;&#x5E7F;&#xFF0C;&#x516C;&#x4F17;&#x53F7;&#x8FD0;&#x4F5C;&#x7B49;&#x3002;&#x4E0B;&#x56FE;&#x4E3B;&#x8981;&#x6982;&#x62EC;&#x53D1;&#x5C55;&#x57FA;&#x672C;&#x89C4;&#x5212;</p>
+</blockquote>
+<h1 id=""><a href="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/&#x6A31;&#x82B1;&#x516C;&#x4F1A;&#x84DD;&#x56FE; %281%29.png" target="_blank"><img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/&#x6A31;&#x82B1;&#x516C;&#x4F1A;&#x84DD;&#x56FE; %281%29.png" alt=""></a></h1>
+<h2 id="&#x76EE;&#x6807;&#x5B9E;&#x884C;&#x4E0E;&#x8BA1;&#x5212;">&#x76EE;&#x6807;&#x5B9E;&#x884C;&#x4E0E;&#x8BA1;&#x5212;</h2>
+<blockquote>
+<p>&#x5728;&#x516C;&#x4F1A;&#x53D1;&#x5C55;&#x4E2D;&#xFF0C;&#x4E0D;&#x53EF;&#x7F3A;&#x5C11;&#x5BF9;&#x76EE;&#x6807;&#x8FDB;&#x884C;&#x660E;&#x786E;&#x7684;&#x89C4;&#x5212;&#x4E0E;&#x5B9E;&#x65BD;&#xFF0C;&#x4EFB;&#x52A1;&#x7684;&#x59D4;&#x6D3E;&#x7B49;&#xFF0C;&#x4E0B;&#x9762;&#x51E0;&#x70B9;&#x4E3B;&#x8981;&#x5F52;&#x7EB3;&#x4E86;&#x516C;&#x4F1A;&#x65E5;&#x540E;&#x53D1;&#x5C55;&#x7684;&#x91CD;&#x8981;&#x4E8B;&#x9879;&#x3002;</p>
+</blockquote>
+<ul>
+<li><p>&#x963F;&#x96E8;&#x5148;&#x62DF;&#x4E00;&#x4E2A;&#x6E38;&#x620F;&#x5916;&#xFF0C;&#x6E38;&#x620F;&#x5185;&#x7684;&#x6D3B;&#x52A8;&#x5956;&#x52B1;&#x9879;&#x3002; &#x7136;&#x540E;&#x8BA8;&#x8BBA;&#xFF0C;&#x6211;&#x4EEC;&#x786E;&#x5B9A;&#x6389;&#x3002;  &#x7FA4;&#x5185; &#x6E38;&#x620F;&#x5185;&#x7684;&#x4E3B;&#x4F53;&#x6D3B;&#x52A8;&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x5B9A;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E00;&#x4E0B;&#x5B98;&#x65B9;&#x7684;&#x6BCF;&#x6708;&#xFF0C;&#x6BCF;&#x5468;&#x8FD9;&#x6837;&#x7684;&#x6D3B;&#x52A8;&#xFF0C;&#x4ECE;&#x4E2D;&#x5438;&#x53D6;&#x4E00;&#x4E0B;&#x6848;&#x4F8B;&#xFF0C;&#x7167;&#x7740;&#x5F04;&#x5C31;&#x884C;&#x3002;  &#x7136;&#x540E;&#x5C31;&#x662F;&#x7279;&#x5B9A;&#x7684;&#x6D3B;&#x52A8;&#xFF0C;&#x5C31;&#x662F;&#x6E38;&#x620F;&#x5185;&#x8FD9;&#x4E9B;&#xFF0C;&#x6BD4;&#x5982; &#x5DE5;&#x4F1A;&#x6218; &#x6392;&#x884C;&#x3002;&#x4F60;&#x62C9;&#x4E00;&#x4E2A;table list &#x51FA;&#x6765;&#x3002;</p>
+</li>
+<li><p>&#x516C;&#x4F17;&#x53F7;&#x8FD9;&#x4E2A;&#xFF0C;&#x67A3;&#x513F;&#x6765;&#x8D1F;&#x8D23;&#x628A;&#xFF0C; &#x4F60;&#x5F04;&#x8FC7;&#x3002;&#x5230;&#x65F6;&#x5019;&#x6211;&#x4F1A;&#x628A;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x6743;&#x9650;&#x8F6C;&#x79FB;&#x7ED9;&#x4F60;</p>
+</li>
+<li><p>&#x4E92;&#x52A8;&#x7B56;&#x5212;&#xFF0C; &#x963F;&#x96E8;&#x5230;&#x65F6;&#x5019;&#x5B89;&#x6392;&#x4E00;&#x4E0B; &#x4F60;&#x4EEC;&#x8BA8;&#x8BBA;&#x5C31;&#x884C;</p>
+</li>
+<li><p>&#x5C0F;&#x7A0B;&#x5E8F;&#x5E73;&#x53F0;&#xFF0C;&#x8FD9;&#x4E2A;&#x6211;&#x6765;&#x641E;&#x5B9A;&#xFF0C;&#x6211;&#x4F30;&#x6478;&#x7740;&#xFF0C;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x53EA;&#x505A;&#x5185;&#x90E8;&#x8D26;&#x53F7;&#x6258;&#x7BA1;&#x670D;&#x52A1;&#xFF0C;&#x540E;&#x671F;&#x6211;&#x4EEC;&#x505A;&#x719F;&#x7EC3;&#x4E86;&#xFF0C;&#x5F00;&#x653E;&#x51FA;&#x53BB;&#xFF0C;&#x901A;&#x8FC7;&#x516C;&#x4F17;&#x53F7;&#x5728;&#x793E;&#x533A;&#x63A8;&#x5E7F;&#x6765;&#x8FBE;&#x5230;&#x5438;&#x5F15;&#x5916;&#x90E8;&#x4EBA;&#x7684;&#x4F7F;&#x7528;&#xFF0C; &#x5173;&#x4E8E;&#x5927;&#x5BB6;&#x5173;&#x5FC3;&#x7684;&#x8D26;&#x53F7;&#x5B89;&#x5168;&#x8FD9;&#x4E2A;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#xFF0C;&#x5230;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4F1A;&#x4E25;&#x683C;&#x5BA1;&#x67E5;&#x7684;&#x3002;</p>
+</li>
+<li><p>&#x5468;&#x8FB9;&#xFF0C; &#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;T&#x6856; &#x6279;&#x53D1;2&#x5757;&#x94B1;&#x4E00;&#x4E2A;&#xFF0C;&#x6211;&#x4EEC;&#x627E;&#x8BBE;&#x8BA1; &#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x5927;logo&#xFF0C;&#x7136;&#x540E;&#x5370;&#x5728;T&#x4E0A;&#xFF0C;&#x5230;&#x65F6;&#x5019;&#x5148;&#x4F1A;&#x5185;&#x6D88;&#x5316;&#xFF0C;&#x62A2;&#x8D2D;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x4E0D;&#x4F1A;&#x662F;&#x4E00;&#x4EBA;&#x4E00;&#x4EF6;&#x513F;&#x3002; &#x5927;&#x6982;&#x5B9A;&#x4EF7;&#x5728;15&#x5DE6;&#x53F3;&#x3002;  &#x5148;&#x5C31;T</p>
+</li>
+<li><p>&#x5E76;&#x8D2D;&#x8FD9;&#x4E2A;&#xFF0C; &#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5C0F;&#x7A0B;&#x5E8F;&#x6258;&#x7BA1;&#xFF0C;&#x548C;&#x5468;&#x8FB9;&#x6240;&#x5F97;&#xFF0C;&#x8FD8;&#x6709;&#x57FA;&#x91D1;&#x6240;&#x5F97;&#xFF0C;&#x5206;&#x5168;&#x989D;&#x8D2D;&#x5165;&#xFF0C;&#x548C;&#x6218;&#x7565;&#x8D2D;&#x5165;&#xFF0C;&#x6218;&#x7565;&#x8D2D;&#x5165; &#x3010;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x548C;&#x4ED6;&#x4EEC;&#x5408;&#x4F5C;&#xFF0C;&#x8BA9;&#x4ED6;&#x4EEC;&#x6765;&#x63A8;&#x5E7F;&#x6211;&#x4EEC;&#x7684;&#x5E73;&#x53F0;&#x548C;&#x7EF4;&#x62A4;&#x6211;&#x4EEC;&#x7684;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x5206;&#x6210;&#x7ED9;&#x4ED6;&#x4EEC;&#x4F1A;&#x957F;&#x3011;</p>
+</li>
+</ul>
+<h2 id="&#x516C;&#x4F1A;&#x798F;&#x5229;&#x4EE5;&#x53CA;&#x6D3B;&#x52A8;&#x5956;&#x52B1;&#x529E;&#x6CD5;">&#x516C;&#x4F1A;&#x798F;&#x5229;&#x4EE5;&#x53CA;&#x6D3B;&#x52A8;&#x5956;&#x52B1;&#x529E;&#x6CD5;</h2>
+<blockquote>
+<p>&#x4E3A;&#x4E86;&#x6D3B;&#x8DC3;&#x516C;&#x4F1A;&#x4F1A;&#x5458;&#x7684;&#x79EF;&#x6781;&#x6027;&#x548C;&#x53C2;&#x4E0E;&#x6027;&#xFF0C;&#x516C;&#x4F1A;&#x5728;&#x5956;&#x52B1;&#x529E;&#x6CD5;&#x4E0A;&#x5217;&#x51FA;&#x4EE5;&#x4E0B;&#x51E0;&#x6761;&#xFF0C;&#xFF08;&#x516C;&#x4F1A;&#x7BA1;&#x7406;&#x4E0D;&#x53C2;&#x4E0E;&#x672C;&#x6D3B;&#x52A8;&#x5956;&#x52B1;&#x529E;&#x6CD5;&#xFF09;</p>
+</blockquote>
+<ol>
+<li>&#x516C;&#x4F1A;&#x8D21;&#x732E;&#x699C;(&#x5468;&#x8D21;&#x732E; &#x6708;&#x8D21;&#x732E;)</li>
+<li>&#x516C;&#x4F1A;&#x6218;&#x4F18;&#x5F02;&#x6210;&#x7EE9;(22 &#x6253;&#x7535;&#x8111; &#x56E0;&#x96BE;&#x5EA6;&#x53D6;&#x9AD8;&#x540D;&#x6B21;)</li>
+<li>&#x516C;&#x4F1A;&#x5185;&#x90E8;&#x5B9A;&#x671F;&#x6D3B;&#x52A8;(&#x6309;&#x5B98;&#x65B9;&#x7279;&#x6B8A;&#x8282;&#x65E5; &#x4EE5;&#x53CA;&#x5B9A;&#x671F;&#x4E3E;&#x884C;&#x5404;&#x79CD;&#x6A21;&#x5F0F;&#x4F1A;&#x5185;&#x7ADE;&#x8D5B;)</li>
+</ol>
+<h3 id="&#x516C;&#x4F1A;&#x8D21;&#x732E;&#x6392;&#x884C;&#x699C;&#x5956;&#x52B1;&#xFF08;&#x5355;&#x4F4D;&#x5143;&#x5B9D;&#xFF09;">&#x516C;&#x4F1A;&#x8D21;&#x732E;&#x6392;&#x884C;&#x699C;&#x5956;&#x52B1;&#xFF08;&#x5355;&#x4F4D;&#x5143;&#x5B9D;&#xFF09;</h3>
+<blockquote>
+<p>&#x6392;&#x540D;&#x6309;&#x7CFB;&#x7EDF;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x3002;&#x4E0D;&#x5B58;&#x5728;&#x5E76;&#x5217;&#x5173;&#x7CFB; , &#x6BCF;&#x5468;&#x5956;&#x52B1;  18000.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x6B21;</th>
+<th style="text-align:left">&#x5468;&#x6392;&#x884C;</th>
+<th style="text-align:left">&#x6708;&#x6392;&#x884C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">500</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">100</td>
+<td style="text-align:left">0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x516C;&#x4F1A;&#x6218;&#x5956;&#x52B1;&#x5236;&#x5EA6;&#xFF08;&#x5355;&#x4F4D;&#x5143;&#x5B9D;&#xFF09;">&#x516C;&#x4F1A;&#x6218;&#x5956;&#x52B1;&#x5236;&#x5EA6;&#xFF08;&#x5355;&#x4F4D;&#x5143;&#x5B9D;&#xFF09;</h3>
+<blockquote>
+<p>&#x6EE1;&#x80DC;&#x573A;&#xFF0C;&#x8FFD;&#x52A0;500&#x5143;&#x5B9D;&#x3002;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x6B21;</th>
+<th style="text-align:left">&#x5956;&#x52B1;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1500</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">500</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">200</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x664B;&#x7EA7;&#x6BD4;&#x8D5B;-&#x79EF;&#x5206;&#x5236;">&#x664B;&#x7EA7;&#x6BD4;&#x8D5B;-&#x79EF;&#x5206;&#x5236;</h3>
+<blockquote>
+<p>&#x4E3A;&#x4E86;&#x5E26;&#x52A8;&#x516C;&#x4F1A;&#x4F1A;&#x5458;&#x5BF9;&#x4E09;&#x56FD;&#x6740;&#x519B;&#x4E89;&#x6A21;&#x5F0F;&#xFF0C;&#x56FD;&#x6218;&#x6A21;&#x5F0F;&#x7684;&#x5A31;&#x4E50;&#x79EF;&#x6781;&#x6027;,&#x516C;&#x4F1A;&#x5728;&#x6BCF;&#x4E2A;&#x6708;&#x7684;&#x6708;&#x4E2D;&#xFF0C;&#x6708;&#x672B;&#x4E3E;&#x884C;&#x519B;&#x4E89;&#x79EF;&#x5206;&#x5236;&#x6BD4;&#x8D5B;&#x548C;&#x56FD;&#x6218;&#x79EF;&#x5206;&#x5236;&#x6BD4;&#x8D5B;&#x3002;&#x5177;&#x4F53;&#x5956;&#x52B1;&#x529E;&#x6CD5;&#x548C;&#x7EC6;&#x8282;&#x5982;&#x4E0B;&#x3002;</p>
+</blockquote>
+<hr>
+<h4 id="&#x519B;&#x4E89;&#x79EF;&#x5206;&#x5236;--5&#x5C40;"><strong>&#x519B;&#x4E89;&#x79EF;&#x5206;&#x5236;  5&#x5C40;</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x8EAB;&#x4EFD;</th>
+<th style="text-align:left">&#x79EF;&#x5206;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x4E3B;&#x5FE0;</td>
+<td style="text-align:left">5&#x5206;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x53CD;</td>
+<td style="text-align:left">3&#x5206;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5185;</td>
+<td style="text-align:left">10&#x5206;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>&#x5956;&#x52B1;&#x529E;&#x6CD5;</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x6B21;</th>
+<th style="text-align:left">&#x5143;&#x5B9D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2000</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1000</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x5907;&#x6CE8;&#xFF1A;&#x7981;&#x5361; &#x7981;&#x8A00; &#x7981;&#x5C06;&#x7531;&#x7BA1;&#x7406;&#x4EBA;&#x5458;&#x53D1;&#x5E03;&#xFF0C;5&#x5C40;&#x540E;&#x53D6;&#x524D;3&#x540D; &#xFF0C;&#x5982;&#x6709;&#x5E76;&#x5217;&#x6E38;&#x620F;&#x91CC;&#x6447;&#x9AB0;&#x5B50;&#xFF0C;&#x4E2D;&#x9014;&#x79BB;&#x5F00;&#x6216;&#x5176;&#x4ED6;&#x539F;&#x56E0;&#x672A;&#x80FD;&#x8BB2;&#x6BD4;&#x8D5B;&#x8FDB;&#x884C;&#x4E0B;&#x53BB;&#x7684;&#xFF0C;&#x89C6;&#x4E3A;&#x5F03;&#x6743;&#xFF0C;&#x5956;&#x52B1;&#x4E0D;&#x4E88;&#x53D1;&#x653E;&#x3002;</strong></p>
+<h3 id="&#x56FD;&#x6218;&#x79EF;&#x5206;&#x5236;-3&#x5C40;">&#x56FD;&#x6218;&#x79EF;&#x5206;&#x5236; 3&#x5C40;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B58;&#x6D3B;&#x52BF;&#x529B;&#x4EBA;&#x5934;</th>
+<th style="text-align:left">&#x79EF;&#x5206;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1.5&#x5206;</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">2&#x5206;</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">3&#x5206;</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">6&#x5206;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x91CE;&#x5FC3;&#x5BB6;</td>
+<td style="text-align:left">8&#x5206;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5931;&#x8D25;</td>
+<td style="text-align:left">0&#x5206;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5956;&#x52B1;&#x529E;&#x6CD5;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x6B21;</th>
+<th style="text-align:left">&#x5143;&#x5B9D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2000</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1000</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x5907;&#x6CE8;&#xFF1A;&#x5168;&#x573A;&#x7981;&#x8A00; 3&#x5C40;&#x540E;&#xFF0C;&#x6309;&#x79EF;&#x5206;&#x53D6;&#x524D;&#x4E09;&#x540D;&#xFF0C;&#x5982;&#x6709;&#x5E76;&#x5217;&#x6E38;&#x620F;&#x91CC;&#x6447;&#x9AB0;&#x5B50;&#xFF0C;&#x4E2D;&#x9014;&#x79BB;&#x5F00;&#x6216;&#x5176;&#x4ED6;&#x539F;&#x56E0;&#x672A;&#x80FD;&#x8BB2;&#x6BD4;&#x8D5B;&#x8FDB;&#x884C;&#x4E0B;&#x53BB;&#x7684;&#xFF0C;&#x89C6;&#x4E3A;&#x5F03;&#x6743;&#xFF0C;&#x5956;&#x52B1;&#x4E0D;&#x4E88;&#x53D1;&#x653E;&#x3002;</strong></p>
 
-							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-						</div>
-					</div>
-				</div>
-				<div class="bb-item" id="item4">
-					<div class="content">
-						<div class="scroller">
-							<h2>使用</h2>
-							<p>
-								安装好以后，接下来就是如何替换资源，在程序目录里面有个config.yaml文件，这个文件里存放你要替换的地址，一行一个。
-							</p>
-							<p>
-								<ul class="grid cs-style-2">
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
 
-									<li>
-										<figure>
-											<figcaption>
-												<h3>config.yaml</h3>
-												<span>config.yaml的存放位置</span>
-											</figcaption>
-											<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew24.png" width="800" height="600" alt="img12">
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<figcaption>
-												<h3>config.yaml</h3>
-												<span>文件内容，注意格式, 前面有个“-”字符</span>
-											</figcaption>
-											<img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew25.png" width="800" height="600" alt="img12">
-										</figure>
-									</li>
-								</ul>
-							</p>
-							<p>
-								config.yaml文件修改了以后要重新启动程序的，这个要注意一下。关于资源地址，你从文件夹里面找就行了， 找到想要替换的，就把地址放到config.yaml里面就可以了.重新启动后，清空三国杀客户端的缓存就行了.
-							</p>
-							<p>
-								下面我放一个简单的替换视频
-							</p>
-							<p>
-								<ul class="grid cs-style-2">
-									<li>
-										<figure>
-											<figcaption>
-												<h3>安装视频</h3>
-												<span>使用流量的同学，请慎重。</span>
-											</figcaption>
-											<video id="my-player" width="800" height="600" class="video-js" controls preload="auto" poster="//yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/video02.png" data-setup='{}'>
-											  <source src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/video02.mp4" type="video/mp4"></source>
-											  <p class="vjs-no-js">
-												To view this video please enable JavaScript, and consider upgrading to a
-												web browser that
-												<a href="http://videojs.com/html5-video-support/" target="_blank">
-												  supports HTML5 video
-												</a>
-											  </p>
-											</video>
-											<!-- <img src="http://yinyueke-www.oss-cn-shanghai.aliyuncs.com/public/screen/public/prew20.png" width="800" height="600" alt="img12"> -->
-										</figure>
-									</li>
-								</ul>
-							</p>
-							<p>
-								以上就是我们全部的内容了。
-							</p>
-							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-						</div>
-					</div>
-				</div>
-				<div class="bb-item" id="item5">
-					<div class="content">
-						<div class="scroller">
-							<h2>结束</h2>
-							<p>
-								这个工具本来不想放出来的，因为前面的帖子有几个小朋友和我要，我就专门利用闲暇时间完善了一下，上手很简单，如果你有什么好的建议和想法 告诉我，我只要不忙，都会帮你解决。
-							</p>
-							<p>
-								关于代码请大家不要恶意修改，分享出来是为了让更多的同学加入到技术行列。如果大家依然有问题，请直接加我们的三国杀群[338087542] 社区的推广链接，也麻烦大家帮我点击一下，谢了。三国杀官方社区 <a href="http://club.sanguosha.com/?fromuid=50555" target="_blank"> http://club.sanguosha.com/?fromuid=50555 </a>
-							</p>
-							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-						</div>
-					</div>
-				</div>
+                        </div>
+                    </div>
+                
+            </div>
 
-				<div class="bb-item" id="item6">
-					<div class="content">
-						<div class="scroller">
-							<h2>三国杀拼图应用</h2>
+            
+                
+                
+                <a href="gong-hui-ji-jin.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 公会基金">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
 
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"概述","level":"1.1","depth":1,"next":{"title":"公会基金","level":"1.2","depth":1,"path":"gong-hui-ji-jin.md","ref":"gong-hui-ji-jin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-02T03:46:06.279Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-06-02T03:46:28.842Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
 
-							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-						</div>
-					</div>
-				</div>
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
 
-				<div class="bb-item" id="item7">
-					<div class="content">
-						<div class="scroller">
-							<h2>结束</h2>
-							<p><em>From <a href="http://sanguosha.com" target="_blank"> "The Funny Side of Sanguosha "</a> by A. B. CUPDIR</em></p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<nav>
-				<span id="bb-nav-prev">&larr;</span>
-				<span id="bb-nav-next">&rarr;</span>
-			</nav>
-
-			<span id="tblcontents" class="menu-button">Table of Contents</span>
-
-		</div>
-
-	</div>
-	<!-- /container -->
-	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/howler/2.0.9/howler.js"></script>
-	<script src="https://cdn.bootcss.com/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
-	<script src="https://cdn.bootcss.com/ace/1.3.3/ace.js"></script>
-	<script src="https://cdn.bootcss.com/ace/1.3.3/ext-static_highlight.js"></script>
-	<script src="js/jquery.mousewheel.js"></script>
-	<script src="js/jquery.jscrollpane.min.js"></script>
-	<script src="js/jquerypp.custom.js"></script>
-	<script src="js/jquery.bookblock.js"></script>
-	<script src="js/page.js"></script>
-	<script>
-		$(function() {
-			var player = videojs('my-player');
-			var sound = new Howl({
-				src: ['http://yinyueke-public.oss-cn-shanghai.aliyuncs.com/audio/sgc.mp3'],
-				autoplay: true,
-				loop: true
-			});
-
-			sound.play();
-			// imagesLoaded https://imagesloaded.desandro.com
-			new imagesLoaded(document.querySelector('#container'), function(instance) {
-				console.log('all images are loaded');
-			});
-			Page.init();
-			// ace
-			function highlight() {
-				var highlighter = ace.require("ace/ext/static_highlight")
-				var dom = ace.require("ace/lib/dom")
-
-				function qsa(sel) {
-					var els = document.querySelectorAll(sel);
-					var result = [];
-					for (var i = 0, l = els.length; i < l; i++)
-						result[i] = els[i];
-					return result;
-				}
-
-				qsa("code[class]").forEach(function(el) {
-					var m = el.className.match(/language-(\w+)|(javascript)/);
-					if (!m) return
-					var mode = "ace/mode/" + (m[1] || m[2]);
-					highlighter.highlight(el, {
-						mode: mode,
-						theme: "ace/theme/eclipse"
-					})
-				});
-			}
-			highlight()
-		});
-	</script>
-</body>
-
+    </body>
 </html>
+
