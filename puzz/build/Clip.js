@@ -1,0 +1,1 @@
+var Clip=function(a,b){var c=this;c.pos=a,c.size=b};
