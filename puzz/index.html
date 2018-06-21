@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class='js'>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Image slider game" />
+    <meta name="author" content="sniksnp" />
+    <title>宝宝的拼图</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/howler/2.0.9/howler.js"></script>
+    <script src="https://cdn.bootcss.com/js-cookie/latest/js.cookie.min.js"></script>
+    <script src="https://cdn.bootcss.com/node-uuid/1.4.8/uuid.min.js"></script>
+    <script src="https://cdn.wilddog.com/sdk/js/2.5.17/wilddog.js"></script>
+    <script type="text/javascript">
+        var config = {
+          syncURL: "https://wd8975023822lhzwug.wilddogio.com" //输入节点 URL
+        };
+        wilddog.initializeApp(config);
+        var wilddogioRef = wilddog.sync().ref();
+
+
+
+    </script>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="demo-3">
+    <main class="main main--demo-3">
+        <div class="content content--demo-3">
+        				<div class="hamburger hamburger--demo-3 js-hover">
+        					<div class="hamburger__line hamburger__line--01">
+        						<div class="hamburger__line-in hamburger__line-in--01"></div>
+        					</div>
+        					<div class="hamburger__line hamburger__line--02">
+        						<div class="hamburger__line-in hamburger__line-in--02"></div>
+        					</div>
+        					<div class="hamburger__line hamburger__line--03">
+        						<div class="hamburger__line-in hamburger__line-in--03"></div>
+        					</div>
+        					<div class="hamburger__line hamburger__line--cross01">
+        						<div class="hamburger__line-in hamburger__line-in--cross01"></div>
+        					</div>
+        					<div class="hamburger__line hamburger__line--cross02">
+        						<div class="hamburger__line-in hamburger__line-in--cross02"></div>
+        					</div>
+        				</div>
+
+        				<div class="global-menu">
+        					<div class="global-menu__wrap">
+        						<a class="global-menu__item global-menu__item--demo-3" id="loadgame" href="javascript:;">载入存档</a>
+        						<a class="global-menu__item global-menu__item--demo-3" id="restartButton" href="javascript:;">重新开始</a>
+
+
+        					</div>
+        				</div>
+        				<svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+        					<path class="shape-overlays__path" d="M 0 100 C 50 100 50 100 100 100 V 100 H 0"></path>
+        					<path class="shape-overlays__path" d="M 0 100 C 50 100 50 100 100 100 V 100 H 0"></path>
+        					<path class="shape-overlays__path" d="M 0 100 C 50 100 50 100 100 100 V 100 H 0"></path>
+        				</svg>
+        			</div><canvas></canvas>
+
+    </main>
+    <div class="overlay overlay--loader overlay--active">
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!--  add power mode  -->
+    <script src="js/activate-power-mode.js"></script>
+    <script src="js/easings.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/Directions.js"></script>
+    <script src="js/Size.js"></script>
+    <script src="js/Position.js"></script>
+    <script src="js/Clip.js"></script>
+    <script src="js/Solver.js"></script>
+    <script src="js/MoveController.js"></script>
+    <script src="js/Shuffler.js"></script>
+    <script src="js/Tile.js"></script>
+    <script src="js/Menu.js"></script>
+    <script src="js/ImageSliderGame.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

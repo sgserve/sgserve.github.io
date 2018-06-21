@@ -1,0 +1,1 @@
+var Position=function(a,b){var c=this;c.x=a,c.y=b};

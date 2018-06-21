@@ -1,0 +1,1 @@
+var Size=function(a,b){var c=this;c.width=a,c.height=b};
