@@ -11,7 +11,7 @@ var Tile = function(ctx, img, clipIndex) {
     self.velocity = 1.8;
     self.acceleration = 0.001;
     self.exitAnimation = null;
-    self.padding = 1;
+    self.padding = 2;
     self.startPos = null;
 
     self.setClip = function(clip) {
